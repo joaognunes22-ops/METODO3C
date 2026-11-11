@@ -1,0 +1,90 @@
+[Script Info]
+Title: SHORT_NATAL_PROFISSIONAL
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Short,Inter Black,84,&H00FFFFFF,&H00FFFFFF,&H00000000,&H50000000,0,0,0,0,100,100,1,0,1,8,6,5,120,120,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.62,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}IMAGINE{\c&H00FFFFFF&\fscx100\fscy100} A CRIANÇA
+Dialogue: 0,0:00:00.62,0:00:00.88,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}IMAGINE {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}A{\c&H00FFFFFF&\fscx100\fscy100} CRIANÇA
+Dialogue: 0,0:00:00.88,0:00:01.26,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}IMAGINE A {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}CRIANÇA{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:01.26,0:00:01.76,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}ESPERANDO{\c&H00FFFFFF&\fscx100\fscy100} UMA SURPRESA
+Dialogue: 0,0:00:01.76,0:00:02.06,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}ESPERANDO {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}UMA{\c&H00FFFFFF&\fscx100\fscy100} SURPRESA
+Dialogue: 0,0:00:02.06,0:00:02.66,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}ESPERANDO UMA {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}SURPRESA{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:02.66,0:00:02.92,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}DO{\c&H00FFFFFF&\fscx100\fscy100} PAPAI NOEL
+Dialogue: 0,0:00:02.92,0:00:03.26,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}DO {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}PAPAI{\c&H00FFFFFF&\fscx100\fscy100} NOEL
+Dialogue: 0,0:00:03.26,0:00:03.56,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}DO {\c&H0000D7FF&}PAPAI{\c&H00FFFFFF&} {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}NOEL{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:03.56,0:00:04.22,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}E{\c&H00FFFFFF&\fscx100\fscy100} O NATAL PASSANDO
+Dialogue: 0,0:00:04.22,0:00:04.40,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}E {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}O{\c&H00FFFFFF&\fscx100\fscy100} NATAL PASSANDO
+Dialogue: 0,0:00:04.40,0:00:04.68,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}E O {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}NATAL{\c&H00FFFFFF&\fscx100\fscy100} PASSANDO
+Dialogue: 0,0:00:04.68,0:00:05.48,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}E O {\c&H0000D7FF&}NATAL{\c&H00FFFFFF&} {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}PASSANDO{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:05.48,0:00:05.84,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}SEM{\c&H00FFFFFF&\fscx100\fscy100} AQUELE
+Dialogue: 0,0:00:05.84,0:00:06.14,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}SEM {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}AQUELE{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:06.14,0:00:06.64,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}MOMENTO{\c&H00FFFFFF&\fscx100\fscy100} ESPECIAL.
+Dialogue: 0,0:00:06.64,0:00:07.92,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}MOMENTO {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}ESPECIAL.{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:07.92,0:00:08.28,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}ÀS{\c&H00FFFFFF&\fscx100\fscy100} VEZES,
+Dialogue: 0,0:00:08.28,0:00:09.00,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}ÀS {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}VEZES,{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:09.00,0:00:09.10,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}O{\c&H00FFFFFF&\fscx100\fscy100} QUE FALTA
+Dialogue: 0,0:00:09.10,0:00:09.36,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}O {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}QUE{\c&H00FFFFFF&\fscx100\fscy100} FALTA
+Dialogue: 0,0:00:09.36,0:00:09.64,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}O QUE {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}FALTA{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:09.64,0:00:09.92,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}NÃO{\c&H00FFFFFF&\fscx100\fscy100} É UM PRESENTE CARO,
+Dialogue: 0,0:00:09.92,0:00:10.12,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}NÃO {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}É{\c&H00FFFFFF&\fscx100\fscy100} UM PRESENTE CARO,
+Dialogue: 0,0:00:10.12,0:00:10.36,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}NÃO É {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}UM{\c&H00FFFFFF&\fscx100\fscy100} PRESENTE CARO,
+Dialogue: 0,0:00:10.36,0:00:10.64,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}NÃO É UM {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}PRESENTE{\c&H00FFFFFF&\fscx100\fscy100} CARO,
+Dialogue: 0,0:00:10.64,0:00:11.54,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}NÃO É UM {\c&H0000D7FF&}PRESENTE{\c&H00FFFFFF&} {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}CARO,{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:11.54,0:00:11.80,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}MAS{\c&H00FFFFFF&\fscx100\fscy100} UM DETALHE MÁGICO.
+Dialogue: 0,0:00:11.80,0:00:12.16,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}MAS {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}UM{\c&H00FFFFFF&\fscx100\fscy100} DETALHE MÁGICO.
+Dialogue: 0,0:00:12.16,0:00:12.78,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}MAS UM {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}DETALHE{\c&H00FFFFFF&\fscx100\fscy100} MÁGICO.
+Dialogue: 0,0:00:12.78,0:00:13.90,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}MAS UM DETALHE {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}MÁGICO.{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:13.90,0:00:14.18,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}COM{\c&H00FFFFFF&\fscx100\fscy100} A PROVA MÁGICA
+Dialogue: 0,0:00:14.18,0:00:14.42,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}COM {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}A{\c&H00FFFFFF&\fscx100\fscy100} PROVA MÁGICA
+Dialogue: 0,0:00:14.42,0:00:14.74,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}COM A {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}PROVA{\c&H00FFFFFF&\fscx100\fscy100} MÁGICA
+Dialogue: 0,0:00:14.74,0:00:15.28,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}COM A {\c&H0000D7FF&}PROVA{\c&H00FFFFFF&} {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}MÁGICA{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:15.28,0:00:15.50,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}DO{\c&H00FFFFFF&\fscx100\fscy100} POLO NORTE,
+Dialogue: 0,0:00:15.50,0:00:15.84,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}DO {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}POLO{\c&H00FFFFFF&\fscx100\fscy100} NORTE,
+Dialogue: 0,0:00:15.84,0:00:16.58,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}DO {\c&H0000D7FF&}POLO{\c&H00FFFFFF&} {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}NORTE,{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:16.58,0:00:16.86,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}ELA{\c&H00FFFFFF&\fscx100\fscy100} RECEBE UMA CARTA
+Dialogue: 0,0:00:16.86,0:00:17.22,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}ELA {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}RECEBE{\c&H00FFFFFF&\fscx100\fscy100} UMA CARTA
+Dialogue: 0,0:00:17.22,0:00:17.50,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}ELA RECEBE {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}UMA{\c&H00FFFFFF&\fscx100\fscy100} CARTA
+Dialogue: 0,0:00:17.50,0:00:17.94,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}ELA RECEBE UMA {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}CARTA{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:17.94,0:00:19.70,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}PERSONALIZADA,{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:19.70,0:00:20.22,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}CERTIFICADO{\c&H00FFFFFF&\fscx100\fscy100} OFICIAL
+Dialogue: 0,0:00:20.22,0:00:20.78,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}{\c&H0000D7FF&}CERTIFICADO{\c&H00FFFFFF&} {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}OFICIAL{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:20.78,0:00:21.24,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}E{\c&H00FFFFFF&\fscx100\fscy100} UM CÓDIGO MÁGICO
+Dialogue: 0,0:00:21.24,0:00:21.48,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}E {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}UM{\c&H00FFFFFF&\fscx100\fscy100} CÓDIGO MÁGICO
+Dialogue: 0,0:00:21.48,0:00:21.98,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}E UM {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}CÓDIGO{\c&H00FFFFFF&\fscx100\fscy100} MÁGICO
+Dialogue: 0,0:00:21.98,0:00:22.64,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}E UM {\c&H0000D7FF&}CÓDIGO{\c&H00FFFFFF&} {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}MÁGICO{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:22.64,0:00:22.86,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}QUE{\c&H00FFFFFF&\fscx100\fscy100} MOSTRA SEU NOME
+Dialogue: 0,0:00:22.86,0:00:23.26,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}QUE {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}MOSTRA{\c&H00FFFFFF&\fscx100\fscy100} SEU NOME
+Dialogue: 0,0:00:23.26,0:00:23.56,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}QUE MOSTRA {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}SEU{\c&H00FFFFFF&\fscx100\fscy100} NOME
+Dialogue: 0,0:00:23.56,0:00:23.84,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}QUE MOSTRA SEU {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}NOME{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:23.84,0:00:24.16,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}NA{\c&H00FFFFFF&\fscx100\fscy100} LISTA DOS BONZINHOS.
+Dialogue: 0,0:00:24.16,0:00:24.54,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}NA {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}LISTA{\c&H00FFFFFF&\fscx100\fscy100} DOS BONZINHOS.
+Dialogue: 0,0:00:24.54,0:00:24.90,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}NA LISTA {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}DOS{\c&H00FFFFFF&\fscx100\fscy100} BONZINHOS.
+Dialogue: 0,0:00:24.90,0:00:25.64,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}NA LISTA DOS {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}BONZINHOS.{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:25.64,0:00:26.28,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}TUDO{\c&H00FFFFFF&\fscx100\fscy100} POR R$ 9,90
+Dialogue: 0,0:00:26.28,0:00:26.68,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}TUDO {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}POR{\c&H00FFFFFF&\fscx100\fscy100} R$ 9,90
+Dialogue: 0,0:00:26.68,0:00:27.58,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}TUDO POR {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}R$ 9,90{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:27.58,0:00:28.00,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}EM{\c&H00FFFFFF&\fscx100\fscy100} ARQUIVO DIGITAL
+Dialogue: 0,0:00:28.00,0:00:28.56,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}EM {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}ARQUIVO{\c&H00FFFFFF&\fscx100\fscy100} DIGITAL
+Dialogue: 0,0:00:28.56,0:00:29.08,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}EM ARQUIVO {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}DIGITAL{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:29.08,0:00:29.42,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}PARA{\c&H00FFFFFF&\fscx100\fscy100} IMPRIMIR.
+Dialogue: 0,0:00:29.42,0:00:30.42,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}PARA {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}IMPRIMIR.{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:30.42,0:00:30.62,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}CLIQUE{\c&H00FFFFFF&\fscx100\fscy100} EM SAIBA MAIS
+Dialogue: 0,0:00:30.62,0:00:30.94,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}CLIQUE {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}EM{\c&H00FFFFFF&\fscx100\fscy100} SAIBA MAIS
+Dialogue: 0,0:00:30.94,0:00:31.18,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}CLIQUE EM {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}SAIBA{\c&H00FFFFFF&\fscx100\fscy100} MAIS
+Dialogue: 0,0:00:31.18,0:00:31.62,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}CLIQUE EM {\c&H0000D7FF&}SAIBA{\c&H00FFFFFF&} {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}MAIS{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:31.62,0:00:32.06,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}E{\c&H00FFFFFF&\fscx100\fscy100} PREPARE UMA SURPRESA
+Dialogue: 0,0:00:32.06,0:00:32.34,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}E {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}PREPARE{\c&H00FFFFFF&\fscx100\fscy100} UMA SURPRESA
+Dialogue: 0,0:00:32.34,0:00:32.68,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}E PREPARE {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}UMA{\c&H00FFFFFF&\fscx100\fscy100} SURPRESA
+Dialogue: 0,0:00:32.68,0:00:33.26,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}E PREPARE UMA {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}SURPRESA{\c&H00FFFFFF&\fscx100\fscy100}
+Dialogue: 0,0:00:33.26,0:00:33.60,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8\fad(110,0)}{\c&H0000D7FF&\fscx125\fscy125\t(0,110,\fscx107\fscy107)}QUE{\c&H00FFFFFF&\fscx100\fscy100} VAI EMOCIONAR.
+Dialogue: 0,0:00:33.60,0:00:33.96,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}QUE {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}VAI{\c&H00FFFFFF&\fscx100\fscy100} EMOCIONAR.
+Dialogue: 0,0:00:33.96,0:00:35.00,Short,,0,0,0,,{\an5\pos(540,1310)\blur0.8}QUE VAI {\c&H0000D7FF&\fscx114\fscy114\t(0,90,\fscx107\fscy107)}EMOCIONAR.{\c&H00FFFFFF&\fscx100\fscy100}
