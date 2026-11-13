@@ -75,6 +75,7 @@ for (const s of SCENARIOS) {
 
   const resultText = await page.locator('#result').innerText();
   for (const e of s.expect) ok(resultText.includes(e), `resultado reflete a resposta: "${e}"`);
+  ok(resultText.includes('Ciclo do Impulso') && (await page.locator('.mech__list li').count()) === 3, 'resultado explica o mecanismo (Ciclo do Impulso + 3 movimentos)');
   const journey = s.journey;
   ok(await page.locator(`.journey-card--${journey}`).isVisible(), `jornada indicada = ${journey}`);
   ok(!/\d+\s?%|diagnóstico de|compatibilidade/i.test(resultText.replace('Não é diagnóstico', '')), 'sem percentuais/diagnósticos inventados');
@@ -110,6 +111,9 @@ for (const s of SCENARIOS) {
   ok(await page.locator('#personal').isVisible(), 'oferta mostra o foco escolhido no quiz');
   ok(await page.locator(`.journey--${journey} .journey__mark`).isVisible(), 'jornada indicada destacada na oferta');
 
+  ok((await page.locator('#ciclo .cycle li').count()) === 4 && (await page.locator('.steps .step').count()) === 3, 'oferta mostra mecanismo do problema (4 etapas) e da solução (3 movimentos)');
+  const pron = await page.locator('#ciclo .cycle li').first().innerText();
+  ok(pron.includes(journey === 'florescer' ? 'ver ele online' : 'ver ela online'), 'exemplos do ciclo adaptados ao público');
   const hrefs = await page.locator('[data-checkout]').evaluateAll((as) => as.map((a) => a.href));
   ok(hrefs.length >= 5 && hrefs.every((h) => h.startsWith(CHECKOUT + '?') && h.includes('utm_source=facebook')), `todos os ${hrefs.length} CTAs de compra → checkout oficial com UTMs`);
   const ctaTexts = await page.locator('a.btn[data-checkout]').allInnerTexts();

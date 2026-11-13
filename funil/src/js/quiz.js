@@ -180,6 +180,8 @@
       comportamento: { perfil: 'tem acompanhado o perfil e os stories dele', conversas: 'tem relido conversas e revisto fotos antigas', mensagem: 'às vezes pensa em mandar mensagem (ou manda) e depois se arrepende', comparar: 'tem se comparado com outras mulheres' },
       frequencia: { muitas: 'várias vezes ao dia', diaria: 'pelo menos uma vez por dia', asvezes: 'de vez em quando', rara: 'raramente' },
       alvo: 'procurar ele',
+      gatilho: 'uma música, uma foto, ver ele online',
+      acao: { perfil: 'vai olhar o perfil dele', conversas: 'relê as conversas', mensagem: 'manda (ou quase manda) a mensagem', comparar: 'se compara com outras mulheres' },
       pensamento: {
         esquecida: 'O pensamento que mais volta é o medo de ser esquecida. Mas o seu valor não depende de quem lembra de você.',
         culpa: 'O pensamento que mais volta é o de que a culpa foi sua. Entender o que aconteceu é saudável; carregar tudo sozinha, não.',
@@ -334,6 +336,8 @@
       comportamento: { mensagem: 'às vezes manda mensagem (ou quase manda) e depois se arrepende', perfil: 'tem vigiado o perfil e os stories dela', ciume: 'fica imaginando com quem ela está', ocupar: 'tem se ocupado o tempo todo para não pensar' },
       frequencia: { muitas: 'várias vezes ao dia', diaria: 'pelo menos uma vez por dia', asvezes: 'de vez em quando', rara: 'raramente' },
       alvo: 'procurar ela',
+      gatilho: 'uma música, uma foto, ver ela online',
+      acao: { mensagem: 'manda (ou quase manda) a mensagem', perfil: 'vai olhar o perfil dela', ciume: 'fica imaginando com quem ela está', ocupar: 'se enche de coisas para não pensar' },
       pensamento: {
         aprovacao: 'O pensamento que mais te pega é a necessidade de saber o que ela pensa de você. Enquanto isso ditar o seu humor, o controle fica nas mãos dela.',
         culpa: 'O pensamento que mais te pega é o de que você podia ter feito diferente. Aprender com isso é útil; ficar preso nisso, não.',
@@ -465,6 +469,7 @@
     var T = track.text, p = [];
     p.push('Pelas suas respostas, parece que você está vivendo uma fase em que <strong>' + T.dor[a.dor] + '</strong> e <strong>' + T.autoestima[a.autoestima] + '</strong> estão ocupando espaço demais na sua rotina.');
     p.push('Você me contou que ' + T.comportamento[a.comportamento] + ', e que a vontade de ' + T.alvo + ' aparece <strong>' + T.frequencia[a.frequencia] + '</strong>.');
+    p.push('Isso tem nome: é o <strong>Ciclo do Impulso</strong>. Um gatilho aparece (' + T.gatilho + '), vem a vontade de ' + T.alvo + ', você ' + T.acao[a.comportamento] + ', sente um alívio de alguns segundos… e logo a dor volta mais forte. Cada volta deixa o ciclo mais automático. <strong>Não é falta de força de vontade: é um padrão. E padrões podem ser interrompidos.</strong>');
     p.push(T.pensamento[a.pensamento]);
 
     var extra = [];
@@ -477,6 +482,19 @@
 
     p.push('A boa notícia é que existem atitudes práticas que você pode começar a desenvolver para recuperar sua estabilidade emocional.');
     return p;
+  }
+
+  function mechanismHtml() {
+    return '<div class="mech">' +
+      '<div class="eyebrow">Como quebrar o seu ciclo</div>' +
+      '<h2 class="mech__h">3 movimentos por dia, durante 30 dias</h2>' +
+      '<ol class="mech__list">' +
+        '<li><b>1</b><span><strong>Entender</strong> · a aula do dia mostra o gatilho por trás do que você sente.</span></li>' +
+        '<li><b>2</b><span><strong>Interromper</strong> · um exercício te dá uma atitude pronta para o momento do impulso.</span></li>' +
+        '<li><b>3</b><span><strong>Reforçar</strong> · uma reflexão fecha o dia e o app marca o seu progresso.</span></li>' +
+      '</ol>' +
+      '<p class="mech__note">Repetir a nova resposta todos os dias é o que vai enfraquecendo a antiga.</p>' +
+    '</div>';
   }
 
   function renderResult(track, a) {
@@ -492,6 +510,7 @@
           buildSummary(track, a).map(function (t) { return '<p>' + t + '</p>'; }).join('') +
           '<div class="result__goal"><span aria-hidden="true">🎯</span><span>Seu objetivo para os próximos 30 dias: <strong>' + track.text.objetivo[a.objetivo] + '</strong>.</span></div>' +
         '</div>' +
+        mechanismHtml() +
         '<div class="journey-card journey-card--' + track.jornada + '">' +
           '<div class="eyebrow">Caminho indicado para você</div>' +
           '<h2>' + j.icon + ' ' + j.name + '</h2>' +
@@ -568,7 +587,8 @@
     }
 
     await say(g === 'homem' ? 'Valeu por confiar em mim até aqui.' : 'Obrigada por confiar em mim até aqui. 💜', id);
-    await say('Preparei um resumo do que você me contou e o caminho que faz mais sentido pra você agora 👇', id);
+    await say('Percebi um **padrão** bem claro nas suas respostas, e ele tem nome.', id);
+    await say('Preparei um resumo do que você me contou, o que está por trás disso e o caminho que faz mais sentido pra você agora 👇', id);
     if (id !== runId) return;
     answers.at = Date.now();
     MR30.answers.save(answers);

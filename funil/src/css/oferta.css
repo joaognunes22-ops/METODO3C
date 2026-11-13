@@ -188,3 +188,29 @@
   .brand span:last-child { font-size: 13.5px; }
   .topbar__cta { padding: 8px 11px; font-size: 12px; }
 }
+
+/* Mecanismo */
+.hl { font-style: italic; color: var(--accent); }
+.cycle { list-style: none; padding: 0; margin: 36px 0 0; display: grid; gap: 10px; counter-reset: c; }
+.cycle li { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 18px 18px 64px; }
+.cycle li b { position: absolute; left: 16px; top: 18px; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); font: 700 15px var(--font-serif); }
+.cycle li:nth-child(3) b { background: var(--gold); }
+.cycle li:nth-child(4) b { background: #8c3b3b; }
+.cycle h3 { font-size: 19px; margin: 4px 0 4px; }
+.cycle p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+.cycle li:not(:last-child)::after { content: "↓"; position: absolute; left: 27px; bottom: -14px; z-index: 1; color: var(--gold); font-weight: 700; background: var(--bg-soft); line-height: 1; padding: 2px 0; }
+.cycle__loop { text-align: center; font: italic 600 17px var(--font-serif); color: #8c3b3b; margin: 14px 0 0; }
+.callout { margin: 28px auto 0; padding: 20px 22px; border-left: 4px solid var(--gold); background: var(--surface); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; box-shadow: var(--shadow); }
+.callout p { margin: 0; }
+@media (min-width: 900px) {
+  .cycle { grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .cycle li { padding: 60px 18px 20px; }
+  .cycle li b { top: 16px; }
+  .cycle li:not(:last-child)::after { content: "→"; left: auto; right: -19px; top: 50%; bottom: auto; transform: translateY(-50%); background: none; }
+}
+.mech__title { font-size: clamp(22px, 3.6vw, 28px); margin: 44px auto 0; max-width: 680px; }
+.step__tag { font: 700 11.5px var(--font-sans) !important; letter-spacing: .1em; text-transform: uppercase; color: var(--gold) !important; margin: 0 0 6px !important; }
+.why30 { margin: 24px auto 0; max-width: 760px; padding: 22px; border-radius: var(--radius); background: var(--gold-soft); }
+.why30 h3 { font-size: 20px; margin-bottom: 6px; }
+.why30 p { margin: 0; }
+[data-theme="reconstruir"] .why30 { background: #ece3d2; }
