@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Método Recomeço 30 Premium — Converse com a Cláudia</title>
+  <meta name="description" content="Responda algumas perguntas rápidas e descubra qual jornada de 30 dias do Método Recomeço 30 Premium combina com o momento que você está vivendo.">
+  <meta name="theme-color" content="#fbf7f2">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Método Recomeço 30 Premium">
+  <meta property="og:description" content="Um plano de 30 dias para reconstruir sua vida emocional após um término.">
+  <meta property="og:image" content="img/claudia-og.jpg">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="preload" as="image" href="img/claudia-avatar.webp">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body class="quiz">
+  <main class="chat">
+    <header class="chat-header">
+      <div class="avatar"><img src="img/claudia-avatar.webp" alt="Cláudia" width="44" height="44"></div>
+      <div class="chat-header__who">
+        <div class="chat-header__name">Cláudia</div>
+        <div class="chat-header__status" id="status">Guia virtual · Método Recomeço 30</div>
+      </div>
+      <button class="chat-header__restart" id="restart" type="button" hidden>Recomeçar</button>
+    </header>
+    <div class="progress" role="progressbar" aria-label="Progresso da conversa" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="progress__bar" id="progress"></div>
+    </div>
+
+    <section class="chat-log" id="log" aria-live="polite" aria-relevant="additions"></section>
+    <div class="chat-input" id="input"></div>
+    <p class="chat-footnote">Conversa de orientação e reflexão · não é diagnóstico nem atendimento psicológico.</p>
+  </main>
+
+  <noscript><p style="padding:24px;text-align:center">Ative o JavaScript para conversar com a Cláudia ou <a href="oferta.html">veja o Método Recomeço 30 Premium</a>.</p></noscript>
+  <script src="js/config.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

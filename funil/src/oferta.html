@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Método Recomeço 30 Premium — Seu plano de 30 dias</title>
+  <meta name="description" content="Um plano de 30 dias com orientações, exercícios e estratégias práticas para recuperar sua autoestima, fortalecer seu autocontrole e começar um novo capítulo depois de um término.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="O término aconteceu. Mas sua vida não precisa parar nele.">
+  <meta property="og:description" content="Método Recomeço 30 Premium · aplicativo + 2 jornadas de 30 aulas + 2 e-books premium. R$ 19,90, pagamento único.">
+  <meta property="og:image" content="img/claudia-og.jpg">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <script>
+    /* Aplica o tema antes da pintura para evitar "piscar" de cores. */
+    (function () {
+      var j = new URLSearchParams(location.search).get('j');
+      if (j !== 'florescer' && j !== 'reconstruir') {
+        try { j = (JSON.parse(sessionStorage.getItem('mr30_quiz') || 'null') || {}).jornada; } catch (e) { j = null; }
+      }
+      document.documentElement.dataset.theme = (j === 'florescer' || j === 'reconstruir') ? j : 'neutro';
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/oferta.css">
+</head>
+<body class="sales">
+  <header class="topbar">
+    <div class="wrap topbar__in">
+      <a class="brand" href="#topo" aria-label="Método Recomeço 30 Premium"><span class="brand__mark">30</span><span><span class="brand__long">Método </span>Recomeço 30 <b>Premium</b></span></a>
+      <a class="topbar__cta" data-checkout href="#">Começar · R$ 19,90</a>
+    </div>
+  </header>
+
+  <main id="topo">
+    <!-- 1. Abertura -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Plano de 30 dias para depois de um término</p>
+          <h1>O término aconteceu. <em>Mas sua vida não precisa parar nele.</em></h1>
+          <p class="hero__sub">Conheça um plano de 30 dias com orientações, exercícios e estratégias práticas para recuperar sua autoestima, fortalecer seu autocontrole e começar um novo capítulo.</p>
+          <div class="personal" id="personal" hidden></div>
+          <a class="btn btn--gold hero__btn" data-checkout href="#">Quero começar meu recomeço</a>
+          <ul class="hero__facts">
+            <li>App + 2 jornadas de 30 aulas</li>
+            <li>2 e-books premium</li>
+            <li>R$ 19,90 · pagamento único</li>
+          </ul>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="phone phone--hero">
+            <div class="phone__screen">
+              <div class="app-top"><span class="app-top__day">Dia 1 de 30</span><span class="app-top__ring"><i style="--p:3.3"></i></span></div>
+              <div class="app-journey"><span data-only="florescer">🌸 Jornada Florescer</span><span data-only="reconstruir">🧭 Jornada Reconstruir</span><span data-only="neutro">🌱 Sua jornada</span></div>
+              <div class="app-card app-card--lesson">
+                <small>Aula do dia</small>
+                <strong>O primeiro passo do recomeço</strong>
+                <span class="app-bar"><i style="width:35%"></i></span>
+              </div>
+              <div class="app-card"><small>Exercício</small><strong>O que eu quero proteger em mim hoje?</strong></div>
+              <div class="app-card"><small>Reflexão</small><strong>Um passo de cada vez.</strong></div>
+              <div class="app-nav"><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Identificação da dor -->
+    <section class="section">
+      <div class="wrap narrow">
+        <p class="eyebrow center">Você se reconhece em alguma dessas situações?</p>
+        <h2 class="center">Tem dias em que tudo parece girar em torno de uma única pessoa.</h2>
+        <ul class="pain">
+          <li><span>📱</span>Abrir o WhatsApp a cada pouco, esperando uma mensagem que não chega.</li>
+          <li><span>🟢</span>Ver a pessoa online e sentir o coração disparar de ansiedade.</li>
+          <li><span>💬</span>Relembrar conversas antigas como se desse para voltar no tempo.</li>
+          <li><span>✉️</span>Pensar em mandar mensagem, mandar, e se arrepender minutos depois.</li>
+          <li><span>🪞</span>Se comparar com outras pessoas e se sentir menos.</li>
+          <li><span>🌫️</span>Perder a concentração no trabalho, nos estudos, até numa conversa, por causa da saudade.</li>
+        </ul>
+        <p class="center pain__close">Se você se viu aqui, saiba: <strong>isso não significa que tem algo errado com você.</strong> Significa que você está atravessando uma fase difícil sem um caminho claro para seguir.</p>
+      </div>
+    </section>
+
+    <!-- 3. Promessa central -->
+    <section class="quote">
+      <div class="wrap narrow">
+        <blockquote>
+          <p>“Você não controla quem decide ficar. Mas pode aprender a recuperar o controle da sua própria vida.”</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 4. Solução -->
+    <section class="section">
+      <div class="wrap">
+        <div class="center narrow">
+          <p class="eyebrow">Apresentando</p>
+          <h2>Método Recomeço 30 Premium</h2>
+          <p class="lead">Não é só mais um e-book. É <strong>um plano de 30 dias para reconstruir sua vida emocional após um término</strong>: um caminho estruturado, com orientações diárias e exercícios práticos, dentro de um aplicativo que acompanha o seu progresso.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><b>1</b><h3>Uma aula por dia</h3><p>Conteúdos curtos e diretos, pensados para caber na sua rotina, sem sobrecarregar.</p></div>
+          <div class="step"><b>2</b><h3>Exercícios e reflexões</h3><p>Em vez de só ler, você pratica: atitudes concretas para os momentos difíceis do dia.</p></div>
+          <div class="step"><b>3</b><h3>Progresso visível</h3><p>O aplicativo registra seus dias concluídos, para você enxergar o quanto já avançou.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Ângulos / benefícios -->
+    <section class="section section--soft">
+      <div class="wrap">
+        <div class="center narrow">
+          <p class="eyebrow">O que você vai trabalhar</p>
+          <h2>Cinco frentes para sair do lugar em que o término te deixou</h2>
+        </div>
+        <div class="angles">
+          <article><span>💭</span><h3>Saudade</h3><p>Entender por que é tão difícil parar de pensar em alguém e aprender a dar menos espaço a esse pensamento na sua rotina.</p></article>
+          <article><span>🛑</span><h3>Autocontrole</h3><p>Reconhecer os gatilhos que levam a mensagens, ligações e olhadas no perfil, e parar de agir por impulso.</p></article>
+          <article><span>💎</span><h3>Autoestima</h3><p>Recuperar o respeito próprio e lembrar que um término fala de uma relação, não do seu valor.</p></article>
+          <article><span>🌱</span><h3>Recomeço</h3><p>Construir uma nova rotina emocional, com hábitos pequenos que devolvem estabilidade aos seus dias.</p></article>
+          <article><span>🔎</span><h3>Clareza</h3><p>Compreender seus comportamentos e os da relação, para tomar decisões melhores, com a cabeça e não só com a dor.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Demonstração do aplicativo -->
+    <section class="section">
+      <div class="wrap">
+        <div class="center narrow">
+          <p class="eyebrow">Por dentro do aplicativo</p>
+          <h2>Tudo no seu celular, um dia de cada vez</h2>
+          <p class="lead">Você abre o app, vê qual é o seu dia, faz a aula e o exercício, e acompanha a sua evolução até o dia 30.</p>
+        </div>
+        <div class="phones" aria-label="Ilustração das telas do aplicativo">
+          <figure>
+            <div class="phone"><div class="phone__screen">
+              <div class="app-top"><span class="app-top__day">Minhas jornadas</span></div>
+              <div class="app-card app-card--florescer"><small>30 aulas</small><strong>🌸 Florescer</strong><span class="app-bar"><i style="width:40%"></i></span></div>
+              <div class="app-card app-card--reconstruir"><small>30 aulas</small><strong>🧭 Reconstruir</strong><span class="app-bar"><i style="width:10%"></i></span></div>
+              <div class="app-card"><small>Materiais</small><strong>📘 E-books premium</strong></div>
+              <div class="app-nav"><i></i><i></i><i></i><i></i></div>
+            </div></div>
+            <figcaption>Escolha sua jornada</figcaption>
+          </figure>
+          <figure>
+            <div class="phone"><div class="phone__screen">
+              <div class="app-top"><span class="app-top__day">Dia 12 de 30</span><span class="app-top__ring"><i style="--p:40"></i></span></div>
+              <div class="app-card app-card--lesson"><small>Aula do dia</small><strong>Quando a vontade de procurar aparece</strong><span class="app-lines"><i></i><i></i><i style="width:70%"></i></span></div>
+              <div class="app-card"><small>Prática</small><strong>Antes de agir, pare e anote o que está sentindo.</strong></div>
+              <div class="app-nav"><i></i><i></i><i></i><i></i></div>
+            </div></div>
+            <figcaption>Aula e prática do dia</figcaption>
+          </figure>
+          <figure>
+            <div class="phone"><div class="phone__screen">
+              <div class="app-top"><span class="app-top__day">Meu progresso</span></div>
+              <div class="app-grid"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="today"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="app-card"><small>Concluídos</small><strong>11 de 30 dias</strong></div>
+              <div class="app-nav"><i></i><i></i><i></i><i></i></div>
+            </div></div>
+            <figcaption>Acompanhe sua evolução</figcaption>
+          </figure>
+        </div>
+        <p class="center note">Ilustração da experiência. As telas reais do aplicativo podem ter pequenas diferenças visuais.</p>
+      </div>
+    </section>
+
+    <!-- 7. As duas jornadas -->
+    <section class="section section--soft" id="jornadas">
+      <div class="wrap">
+        <div class="center narrow">
+          <p class="eyebrow">Duas jornadas completas, no mesmo acesso</p>
+          <h2>Escolha o seu caminho (ou percorra os dois)</h2>
+        </div>
+        <div class="journeys">
+          <article class="journey journey--florescer">
+            <span class="journey__tag">Jornada feminina · 30 aulas</span>
+            <h3>🌸 Florescer</h3>
+            <p>Para mulheres que desejam recuperar a autoestima, lidar melhor com a dor do término, desenvolver autonomia emocional e reconstruir a própria vida.</p>
+            <ul>
+              <li>Saudade e dependência emocional</li>
+              <li>A vontade de procurar o ex</li>
+              <li>O medo de ser esquecida</li>
+              <li>A sensação de rejeição</li>
+              <li>Autovalorização e limites emocionais</li>
+              <li>Reconstrução da confiança e desenvolvimento pessoal</li>
+            </ul>
+            <span class="journey__mark" data-only="florescer">Indicada para você pelo quiz</span>
+          </article>
+          <article class="journey journey--reconstruir">
+            <span class="journey__tag">Jornada masculina · 30 aulas</span>
+            <h3>🧭 Reconstruir</h3>
+            <p>Para homens que desejam recuperar o autocontrole, enfrentar o sofrimento após o término e reconstruir a confiança pessoal.</p>
+            <ul>
+              <li>O impulso de mandar mensagens</li>
+              <li>Ansiedade após a separação</li>
+              <li>O medo de perder a ex definitivamente</li>
+              <li>Ciúme e insegurança</li>
+              <li>Necessidade de aprovação</li>
+              <li>Respeito próprio, autocontrole e reconstrução emocional</li>
+            </ul>
+            <span class="journey__mark" data-only="reconstruir">Indicada para você pelo quiz</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. O que está incluído -->
+    <section class="section">
+      <div class="wrap narrow">
+        <div class="center">
+          <p class="eyebrow">Tudo o que você recebe</p>
+          <h2>Um pacote completo para os seus próximos 30 dias</h2>
+        </div>
+        <ul class="stack">
+          <li><span>📱</span><div><strong>Aplicativo Método Recomeço 30 Premium</strong><small>O centro do método: suas aulas, exercícios e progresso em um só lugar.</small></div></li>
+          <li><span>🌸</span><div><strong>Jornada Florescer: 30 aulas</strong><small>Autoestima, autovalorização, limites e autonomia emocional.</small></div></li>
+          <li><span>🧭</span><div><strong>Jornada Reconstruir: 30 aulas</strong><small>Autocontrole, respeito próprio, confiança e reconstrução emocional.</small></div></li>
+          <li><span>📘</span><div><strong>Dois e-books premium, um para cada jornada</strong><small>Orientações práticas para lidar com gatilhos emocionais, impulsos, ansiedade, saudade e situações difíceis do dia a dia.</small></div></li>
+          <li><span>✍️</span><div><strong>Exercícios e reflexões</strong><small>Para transformar o que você aprende em atitude.</small></div></li>
+          <li><span>🧠</span><div><strong>Estratégias emocionais práticas</strong><small>Para os momentos em que a saudade ou o impulso apertam.</small></div></li>
+          <li><span>📈</span><div><strong>Acompanhamento de progresso no app</strong><small>Veja cada dia concluído até completar os 30.</small></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 9. Oferta -->
+    <section class="offer" id="oferta">
+      <div class="wrap narrow">
+        <div class="offer__box">
+          <p class="eyebrow">Acesso completo</p>
+          <h2>Método Recomeço 30 Premium</h2>
+          <ul class="offer__list">
+            <li>Aplicativo com as duas jornadas (60 aulas)</li>
+            <li>2 e-books premium</li>
+            <li>Exercícios, reflexões e acompanhamento de progresso</li>
+          </ul>
+          <p class="offer__label">Acesso completo por apenas</p>
+          <p class="offer__price"><small>R$</small>19<span>,90</span></p>
+          <p class="offer__terms"><strong>Pagamento único.</strong> Sem mensalidades. 100% digital.</p>
+          <a class="btn btn--gold btn--block offer__btn" data-checkout href="#">Quero começar meu recomeço</a>
+          <p class="offer__secure">🔒 Pagamento processado com segurança pela Cakto. O acesso ao aplicativo é liberado após a confirmação do pagamento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Objeções -->
+    <section class="section">
+      <div class="wrap narrow">
+        <div class="center">
+          <p class="eyebrow">Perguntas frequentes</p>
+          <h2>Antes de começar</h2>
+        </div>
+        <div class="faq">
+          <details><summary>O método vai fazer meu ex voltar?</summary><p>Não. E desconfie de quem promete isso. Ninguém controla os sentimentos ou as decisões de outra pessoa. O Método Recomeço 30 é sobre <strong>você</strong>: recuperar sua autoestima, seu autocontrole e sua clareza, para decidir os próximos passos com mais tranquilidade, seja qual for o caminho.</p></details>
+          <details><summary>Isso é terapia?</summary><p>Não. É um método educativo de desenvolvimento pessoal, com conteúdos, exercícios e reflexões. Ele não substitui acompanhamento psicológico ou médico. Se você estiver em sofrimento intenso, procure um profissional ou o CVV (ligue 188, 24h, gratuito).</p></details>
+          <details><summary>Em quanto tempo vou me sentir melhor?</summary><p>Cada pessoa tem o seu ritmo, e não existe prazo garantido. O que o método oferece é uma estrutura de 30 dias com um passo por dia, para você não atravessar essa fase sem direção.</p></details>
+          <details><summary>Qual jornada é para mim?</summary><p>A Florescer foi pensada para mulheres e a Reconstruir para homens, mas você escolhe a que mais conversa com o seu momento. O acesso completo inclui as duas.</p></details>
+          <details><summary>Como recebo o acesso?</summary><p>Depois da confirmação do pagamento na Cakto, o seu acesso ao aplicativo é liberado com o e-mail informado na compra. Por isso, use um e-mail que você acessa com frequência.</p></details>
+          <details><summary>É assinatura? Vou ser cobrado(a) todo mês?</summary><p>Não. O valor de R$ 19,90 é um pagamento único, sem mensalidades.</p></details>
+          <details><summary>E se eu me arrepender da compra?</summary><p>Compras on-line contam com o direito de arrependimento de 7 dias previsto no Código de Defesa do Consumidor (art. 49). A solicitação é feita pelos canais da Cakto informados no e-mail da compra.</p></details>
+          <details><summary>Preciso instalar alguma coisa?</summary><p>O aplicativo funciona pelo navegador do celular ou do computador. Basta entrar com o seu acesso.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Fechamento -->
+    <section class="final">
+      <div class="wrap narrow center">
+        <h2>Daqui a 30 dias, você pode estar no mesmo lugar, ou alguns passos à frente.</h2>
+        <p class="lead">O término aconteceu. O que você faz com os próximos dias é uma escolha sua.</p>
+        <a class="btn btn--gold" data-checkout href="#">Quero começar meu recomeço</a>
+        <p class="final__price">R$ 19,90 · pagamento único · acesso 100% digital</p>
+        <p class="final__quiz"><a href="index.html">Ainda não fez o quiz? Converse com a Cláudia</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap narrow center">
+      <p><strong>Método Recomeço 30 Premium</strong></p>
+      <p>Este é um produto educativo de desenvolvimento pessoal. Não é tratamento psicológico, não substitui terapia ou acompanhamento médico e não garante reconciliação nem resultados em prazo determinado. A Cláudia é uma guia virtual do método.</p>
+      <p>Em caso de sofrimento intenso, procure ajuda: <strong>CVV, ligue 188</strong> (24h, gratuito) ou cvv.org.br.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="sticky" aria-hidden="true">
+    <div><strong>R$ 19,90</strong><small>pagamento único</small></div>
+    <a class="btn btn--gold" data-checkout href="#" tabindex="-1">Começar agora</a>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/oferta.js"></script>
+</body>
+</html>

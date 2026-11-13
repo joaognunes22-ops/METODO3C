@@ -1,0 +1,13 @@
+{
+  "name": "metodo-recomeco-30-funil",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Quiz conversacional + página de vendas do Método Recomeço 30 Premium (site estático).",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs src 5173",
+    "preview": "node scripts/serve.mjs dist 4173",
+    "test": "npm run build && node scripts/test.mjs"
+  }
+}
