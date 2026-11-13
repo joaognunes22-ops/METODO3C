@@ -35,7 +35,7 @@ for (const [g, title] of [['mulher', 'Jornada Florescer'], ['homem', 'Jornada Re
     .replace(/<title>[^<]*<\/title>/, `<title>Método Recomeço 30 Premium — ${title}</title>`));
 }
 
-for (const page of ['index.html', 'oferta.html', 'mulher.html', 'homem.html']) {
+for (const page of ['index.html', 'oferta.html', 'receba.html', 'mulher.html', 'homem.html']) {
   let html = readFileSync(join(dist, page), 'utf8');
   for (const [from, to] of Object.entries(rename)) html = html.split(`"${from}"`).join(`"${to}"`);
   writeFileSync(join(dist, page), html);

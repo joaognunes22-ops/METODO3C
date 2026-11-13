@@ -102,8 +102,27 @@ for (const s of SCENARIOS) {
     await c2.close();
   }
 
-  // Resultado → página de vendas
+  // Resultado → página curta "o que você recebe"
   await page.locator('#cta-plano').click();
+  await page.waitForURL(/receba\.html/);
+  ok((await page.evaluate(() => document.documentElement.dataset.theme)) === journey, `demonstração no visual ${journey}`);
+  ok(await page.locator('#focus').isVisible(), 'demonstração mostra o foco do quiz');
+  ok((await page.locator('#tag').innerText()).includes(journey === 'florescer' ? 'Florescer' : 'Reconstruir'), 'demonstração adaptada à jornada');
+  for (let i = 0; i < 4; i++) {
+    await page.locator(`#moves button[data-i="${i}"]`).click();
+    ok((await page.locator(`#moves button[data-i="${i}"]`).getAttribute('aria-selected')) === 'true' && (await page.locator('#screen .s-body').count()) === 1, `demo: passo ${i + 1} (${['Entender', 'Interromper', 'Reforçar', 'Evoluir'][i]}) abre`);
+  }
+  ok((await page.locator('#screen').innerText()).includes('11'), 'demo: tela de progresso dos 30 dias');
+  const firstBook = await page.locator('.bookwrap').first().innerText();
+  ok(new RegExp(journey, 'i').test(firstBook) && /da sua jornada/i.test(firstBook), 'e-book da jornada aparece primeiro');
+  ok((await page.locator('.bookwrap').count()) === 2, 'os 2 e-books aparecem');
+  const rhrefs = await page.locator('[data-checkout]').evaluateAll((as) => as.map((a) => a.href));
+  ok(rhrefs.length === 4 && rhrefs.every((h) => h.startsWith(CHECKOUT + '?') && h.includes('utm_source=facebook')), `demonstração: ${rhrefs.length} botões → checkout oficial com UTMs`);
+  ok(await page.locator('.dock').isVisible(), 'botão de checkout fixo sempre visível');
+  ok(await noHorizontalScroll(page), 'demonstração sem rolagem horizontal');
+  ok((await imagesLoaded(page)).length === 0, 'imagens da demonstração carregadas');
+  await page.screenshot({ path: join(shots, `${s.name}-receba.png`), fullPage: true });
+  await page.locator('#more').click();
   await page.waitForURL(/oferta\.html/);
   const url = new URL(page.url());
   ok(url.searchParams.get('j') === journey && url.searchParams.get('utm_source') === 'facebook', 'quiz → oferta leva jornada e UTMs');

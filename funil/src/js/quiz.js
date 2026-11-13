@@ -499,7 +499,7 @@
 
   function renderResult(track, a) {
     var j = JOURNEYS[track.jornada];
-    var ofertaUrl = MR30.internalUrl('oferta.html', { j: track.jornada });
+    var ofertaUrl = MR30.internalUrl('receba.html', { j: track.jornada });
     var html =
       '<div class="result" id="result" tabindex="-1">' +
         '<div class="result__head">' + avatar().replace('width="34" height="34"', 'width="52" height="52"') +
@@ -522,7 +522,7 @@
           '<p style="margin:0">Dentro do <strong>Método Recomeço 30 Premium</strong> você recebe o aplicativo com a ' + j.name + ' (e também a outra jornada), dois e-books premium, exercícios, reflexões e acompanhamento do seu progresso.</p>' +
         '</div>' +
         '<div class="result__cta">' +
-          '<a class="btn btn--block" id="cta-plano" href="' + ofertaUrl + '">Ver meu plano de 30 dias</a>' +
+          '<a class="btn btn--block" id="cta-plano" href="' + ofertaUrl + '">Ver o que eu vou receber</a>' +
           '<a class="btn btn--ghost btn--block" id="cta-checkout" data-checkout href="#">Quero começar meu recomeço</a>' +
           '<p class="result__price">Acesso completo por <strong>' + MR30.PRICE_LABEL + '</strong> · pagamento único, sem mensalidade</p>' +
         '</div>' +
