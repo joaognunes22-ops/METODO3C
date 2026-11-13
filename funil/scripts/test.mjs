@@ -42,6 +42,8 @@ async function newPage(s) {
   page.on('pageerror', (e) => problems.push('pageerror: ' + e.message));
   page.on('requestfailed', (r) => problems.push('requestfailed: ' + r.url()));
   // Nunca navegar para o checkout real durante os testes.
+  // Scripts de rastreamento externos são simulados nos testes (rede bloqueada aqui).
+  await page.route('https://cdn.utmify.com.br/**', (route) => route.fulfill({ status: 200, contentType: 'text/javascript', body: '/* utmify mock */' }));
   await page.route('https://pay.cakto.com.br/**', (route) => route.fulfill({ status: 200, contentType: 'text/html', body: '<title>checkout-mock</title>' }));
   return { ctx, page, problems };
 }

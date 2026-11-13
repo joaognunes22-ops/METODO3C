@@ -54,7 +54,7 @@ for (const f of walk(dist)) {
   const pays = [...t.matchAll(/https?:\/\/pay\.[^'"\s)]+/g)].map((m) => m[0]);
   for (const p of pays) if (p !== CHECKOUT) errors.push(`${basename(f)}: checkout inesperado ${p}`);
   if (/service_role|sb_secret_|eyJhbGciOi|SUPABASE_[A-Z_]*KEY|sk_live|-----BEGIN/i.test(t)) errors.push(`${basename(f)}: possível segredo exposto`);
-  if (/utmify|grandesdescobertas|tynk\.ai|chatecom|pushState/i.test(t)) errors.push(`${basename(f)}: resquício de código de terceiros`);
+  if (/grandesdescobertas|tynk\.ai|chatecom|pushState/i.test(t)) errors.push(`${basename(f)}: resquício de código de terceiros`);
 }
 
 if (errors.length) { console.error('BUILD FALHOU:\n- ' + errors.join('\n- ')); process.exit(1); }
