@@ -26,6 +26,24 @@ npm run dev        # servidor local de src/ em http://localhost:5173
 npm test           # build + testes ponta a ponta no Chromium (Playwright)
 ```
 
+## Dois roteiros: mulher e homem
+
+A primeira pergunta da Cláudia é "você é mulher ou homem?". A resposta muda as cores do chat e leva a um roteiro próprio de 8 perguntas:
+
+| | Mulher → Jornada Florescer | Homem → Jornada Reconstruir |
+|---|---|---|
+| Cores | rosé, creme, sálvia, dourado | azul-marinho, grafite, areia, dourado (chat escuro) |
+| Temas | saudade dele, ser substituída, comparação, medo de ser esquecida, culpa, limites, autonomia | saudade dela, medo de perder de vez, ela com outro, ciúme, aprovação, ansiedade, respeito próprio, controle |
+| Oferta | `oferta.html?j=florescer` | `oferta.html?j=reconstruir` |
+
+Links diretos para anúncios segmentados (pulam a pergunta inicial e já abrem com as cores certas):
+
+- `/mulher.html` (ou `/mulher` no Cloudflare Pages)
+- `/homem.html` (ou `/homem`)
+- Em desenvolvimento: `index.html?g=mulher` / `index.html?g=homem`
+
+Os textos de cada roteiro ficam em `src/js/quiz.js`, nos objetos `MULHER` e `HOMEM`.
+
 `?fast=1` no quiz zera os atrasos de digitação (uso em testes).
 
 ## Checkout

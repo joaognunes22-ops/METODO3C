@@ -5,20 +5,29 @@
   MR30.bindCheckoutLinks();
 
   var FOCO = {
-    impulso: 'parar de agir por impulso',
-    autoestima: 'recuperar sua autoestima e seu respeito próprio',
-    paz: 'voltar a ter paz para dormir e se concentrar',
-    clareza: 'ter clareza para decidir seus próximos passos'
+    florescer: {
+      impulso: 'parar de procurar ele por impulso',
+      autoestima: 'recuperar sua autoestima e seu valor',
+      paz: 'voltar a ter paz, dormir bem e se concentrar',
+      autonomia: 'ter autonomia emocional e viver por você'
+    },
+    reconstruir: {
+      impulso: 'parar de agir por impulso',
+      respeito: 'recuperar seu respeito próprio e sua confiança',
+      foco: 'voltar a ter foco e dormir bem',
+      controle: 'retomar o controle da sua vida'
+    }
   };
   var NOME = { florescer: '🌸 Jornada Florescer', reconstruir: '🧭 Jornada Reconstruir' };
 
   var a = MR30.answers.load();
   var theme = document.documentElement.dataset.theme;
   var box = document.getElementById('personal');
-  if (a && FOCO[a.objetivo] && NOME[theme]) {
+  var foco = a && FOCO[theme] && FOCO[theme][a.objetivo];
+  if (foco && NOME[theme]) {
     box.textContent = '';
     var b1 = document.createElement('strong'); b1.textContent = NOME[theme];
-    var b2 = document.createElement('strong'); b2.textContent = FOCO[a.objetivo];
+    var b2 = document.createElement('strong'); b2.textContent = foco;
     box.append('Caminho indicado pela Cláudia: ', b1, '. Seu foco nos próximos 30 dias: ', b2, '.');
     box.hidden = false;
   }

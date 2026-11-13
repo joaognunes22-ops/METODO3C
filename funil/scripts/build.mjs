@@ -27,7 +27,15 @@ for (const file of walk(src)) {
   copyFileSync(file, join(dist, out));
 }
 
-for (const page of ['index.html', 'oferta.html']) {
+// Entradas segmentadas para anúncios: /mulher e /homem pulam a pergunta inicial.
+const quizHtml = readFileSync(join(dist, 'index.html'), 'utf8');
+for (const [g, title] of [['mulher', 'Jornada Florescer'], ['homem', 'Jornada Reconstruir']]) {
+  writeFileSync(join(dist, `${g}.html`), quizHtml
+    .replace('<html lang="pt-BR" translate="no">', `<html lang="pt-BR" translate="no" data-g="${g}">`)
+    .replace(/<title>[^<]*<\/title>/, `<title>Método Recomeço 30 Premium — ${title}</title>`));
+}
+
+for (const page of ['index.html', 'oferta.html', 'mulher.html', 'homem.html']) {
   let html = readFileSync(join(dist, page), 'utf8');
   for (const [from, to] of Object.entries(rename)) html = html.split(`"${from}"`).join(`"${to}"`);
   writeFileSync(join(dist, page), html);

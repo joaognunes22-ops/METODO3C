@@ -24,14 +24,14 @@ let pass = 0, fail = 0;
 const ok = (cond, msg) => { if (cond) { pass++; console.log('  ✓ ' + msg); } else { fail++; console.log('  ✗ ' + msg); } };
 
 const SCENARIOS = [
-  { name: 'florescer-celular', device: 'iPhone 13', path: ['saudade', 'recente', 'perfil', 'muitas', 'muito', 'abalada', 'florescer', 'autoestima'],
-    expect: ['a saudade', 'a insegurança', 'várias vezes ao dia', 'término é recente', 'rotina está pesando', 'recuperar sua autoestima'] },
-  { name: 'reconstruir-celular', device: 'Pixel 7', path: ['medo', 'vaivem', 'mensagem', 'asvezes', 'ok', 'boa', 'reconstruir', 'impulso'],
-    expect: ['o medo de que essa história nunca mais volte', 'os pensamentos sobre essa pessoa', 'de vez em quando', 'vai e volta', 'impulso é muito comum', 'parar de agir por impulso'] },
-  { name: 'florescer-desktop', viewport: { width: 1366, height: 860 }, path: ['seguir', 'longo', 'isolar', 'rara', 'automatico', 'futuro', 'florescer', 'clareza'],
-    expect: ['a dificuldade de seguir em frente', 'a incerteza sobre o futuro', 'raramente', 'tempo, sozinho', 'ter clareza'] },
-  { name: 'reconstruir-desktop', viewport: { width: 1366, height: 860 }, path: ['substituido', 'meses', 'conversas', 'diaria', 'alguns', 'oscila', 'reconstruir', 'paz'],
-    expect: ['outra pessoa ocupou o seu lugar', 'a oscilação da sua autoestima', 'pelo menos uma vez por dia', 'rotina está pesando', 'paz para dormir'] }
+  { name: 'mulher-celular', device: 'iPhone 13', journey: 'florescer', path: ['mulher', 'saudade', 'recente', 'perfil', 'muitas', 'esquecida', 'muito', 'abalada', 'autoestima'],
+    expect: ['a saudade dele', 'a insegurança', 'várias vezes ao dia', 'procurar ele', 'medo de ser esquecida', 'término é recente', 'rotina está pesando', 'recuperar sua autoestima e seu valor'] },
+  { name: 'homem-celular', device: 'Pixel 7', journey: 'reconstruir', path: ['homem', 'perder', 'vaivem', 'mensagem', 'asvezes', 'aprovacao', 'ok', 'boa', 'impulso'],
+    expect: ['o medo de perder ela de vez', 'a ansiedade e o impulso', 'de vez em quando', 'procurar ela', 'o que ela pensa de você', 'vai e volta', 'impulso é muito comum', 'parar de agir por impulso'] },
+  { name: 'mulher-desktop', viewport: { width: 1366, height: 860 }, journey: 'florescer', path: ['mulher', 'substituida', 'longo', 'comparar', 'rara', 'suficiente', 'automatico', 'limites', 'autonomia'],
+    expect: ['a sensação de ter sido substituída', 'aceitava menos do que merecia', 'raramente', 'outras mulheres', 'não ter sido suficiente', 'tempo, sozinho', 'autonomia emocional'] },
+  { name: 'homem-desktop', viewport: { width: 1366, height: 860 }, journey: 'reconstruir', path: ['homem', 'outro', 'meses', 'ciume', 'diaria', 'ansiedade', 'alguns', 'aprovacao', 'controle'],
+    expect: ['a ideia de ela estar com outro', 'a necessidade de aprovação', 'pelo menos uma vez por dia', 'com quem ela está', 'ansiedade que não passa', 'rotina está pesando', 'retomar o controle'] }
 ];
 
 async function newPage(s) {
@@ -63,6 +63,7 @@ for (const s of SCENARIOS) {
   ok(first.includes('Oi, eu sou a Cláudia'), 'abertura da Cláudia exibida');
 
   for (let i = 0; i < s.path.length; i++) {
+    if (i === 1) ok((await page.evaluate(() => document.documentElement.dataset.theme)) === s.journey, `cores do quiz mudam para ${s.journey} após escolher "${s.path[0]}"`);
     const btn = page.locator(`.choice[data-value="${s.path[i]}"]`);
     await btn.waitFor({ state: 'visible' });
     await btn.click();
@@ -74,7 +75,7 @@ for (const s of SCENARIOS) {
 
   const resultText = await page.locator('#result').innerText();
   for (const e of s.expect) ok(resultText.includes(e), `resultado reflete a resposta: "${e}"`);
-  const journey = s.path[6];
+  const journey = s.journey;
   ok(await page.locator(`.journey-card--${journey}`).isVisible(), `jornada indicada = ${journey}`);
   ok(!/\d+\s?%|diagnóstico de|compatibilidade/i.test(resultText.replace('Não é diagnóstico', '')), 'sem percentuais/diagnósticos inventados');
 
@@ -88,12 +89,14 @@ for (const s of SCENARIOS) {
 
   // Botão "Recomeçar" reinicia a conversa.
   // (testado só no primeiro cenário para não alongar o tempo)
-  if (s.name === 'florescer-celular') {
+  if (s.name === 'mulher-celular') {
     const { page: p2, ctx: c2 } = await newPage(s);
     await p2.goto(`${BASE}/index.html?fast=1`);
+    await p2.locator('.choice[data-value="mulher"]').click();
     await p2.locator('.choice[data-value="saudade"]').click();
     await p2.locator('#restart').click();
-    await p2.locator('.choice[data-value="saudade"]').waitFor();
+    await p2.locator('.choice[data-value="mulher"]').waitFor();
+    ok((await p2.evaluate(() => document.documentElement.dataset.theme)) === 'neutro', 'Recomeçar volta ao visual neutro');
     ok((await p2.locator('.bubble--guest').count()) === 0, 'botão Recomeçar reinicia o quiz');
     await c2.close();
   }
@@ -159,6 +162,21 @@ console.log('\n▶ oferta-direta');
   await ctx.close();
 }
 
+// Entradas segmentadas para anúncios.
+for (const [g, j, first, word] of [['mulher', 'florescer', 'saudade', 'dele'], ['homem', 'reconstruir', 'perder', 'dela']]) {
+  console.log(`\n▶ entrada-${g}`);
+  const { ctx, page, problems } = await newPage({ device: 'iPhone 13' });
+  await page.goto(`${BASE}/${g}.html?fast=1&utm_source=ig`);
+  ok((await page.evaluate(() => document.documentElement.dataset.theme)) === j, `/${g} já abre com o visual ${j}`);
+  await page.locator(`.choice[data-value="${first}"]`).waitFor();
+  ok((await page.locator('.choice[data-value="mulher"], .choice[data-value="homem"]').count()) === 0, `/${g} pula a pergunta mulher/homem`);
+  ok((await page.locator('.choices').innerText()).includes(word), `/${g} mostra as perguntas do roteiro ${g === 'mulher' ? 'feminino' : 'masculino'}`);
+  ok(await noHorizontalScroll(page), 'sem rolagem horizontal');
+  await page.screenshot({ path: join(shots, `entrada-${g}.png`) });
+  ok(problems.length === 0, 'console sem erros/avisos' + (problems.length ? ': ' + problems.join(' | ') : ''));
+  await ctx.close();
+}
+
 // Modo real (sem ?fast): confirma a emulação de digitação.
 console.log('\n▶ ritmo-de-digitação');
 {
@@ -166,10 +184,10 @@ console.log('\n▶ ritmo-de-digitação');
   await page.goto(`${BASE}/index.html`);
   await page.locator('.choice').first().waitFor({ timeout: 15000 });
   const t0 = Date.now();
-  await page.locator('.choice[data-value="saudade"]').click();
+  await page.locator('.choice[data-value="mulher"]').click();
   await page.locator('.typing').first().waitFor({ timeout: 3000 });
   ok(true, 'indicador "digitando" aparece entre mensagens');
-  await page.locator('.choice[data-value="recente"]').waitFor({ timeout: 15000 });
+  await page.locator('.choice[data-value="saudade"]').waitFor({ timeout: 15000 });
   const dt = Date.now() - t0;
   ok(dt > 1000 && dt < 9000, `próxima pergunta em ${dt} ms (ritmo natural, sem demora excessiva)`);
   await ctx.close();
