@@ -1,10 +1,10 @@
 /* Configuração central do funil — Método Recomeço 30 Premium.
  * Único lugar onde o checkout é definido. Não altere preço/produto aqui:
- * o valor (R$ 19,90, pagamento único) é definido na própria Cakto. */
+ * o valor (R$ 9,90, pagamento único) é definido na própria Cakto. */
 window.MR30 = {
   CHECKOUT_URL: 'https://pay.cakto.com.br/z5yir23_1318125',
   APP_URL: 'https://metodo-recomeco-30.joaognunes22.workers.dev',
-  PRICE_LABEL: 'R$ 19,90',
+  PRICE_LABEL: 'R$ 9,90',
   // Parâmetros de rastreamento repassados ao checkout quando presentes na URL de entrada.
   TRACKING_KEYS: ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'src', 'sck', 'xcod', 'fbclid', 'gclid', 'ttclid']
 };

@@ -140,7 +140,7 @@ for (const s of SCENARIOS) {
   const ctaTexts = await page.locator('a.btn[data-checkout]').allInnerTexts();
   ok(ctaTexts.filter((t) => /QUERO COMEÇAR MEU RECOMEÇO/i.test(t)).length >= 3, 'CTA "QUERO COMEÇAR MEU RECOMEÇO" presente');
   const body = await page.locator('body').innerText();
-  ok(/R\$\s?19,90/.test(body) && /PAGAMENTO ÚNICO/i.test(body) && /Sem mensalidades/i.test(body), 'oferta: R$ 19,90, pagamento único, sem mensalidades');
+  ok(/R\$\s?9,90/.test(body) && /PAGAMENTO ÚNICO/i.test(body) && /Sem mensalidades/i.test(body), 'oferta: R$ 9,90, pagamento único, sem mensalidades');
   ok(!/reconquist|garantid[oa] que|volta em \d+ dias/i.test(body), 'sem promessas de reconquista garantida');
 
   // FAQ abre/fecha
