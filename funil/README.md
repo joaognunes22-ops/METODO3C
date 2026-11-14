@@ -2,6 +2,8 @@
 
 Anúncio → **Quiz conversacional (Cláudia)** → **Resultado personalizado** → **Oferta** → **Checkout Cakto** → acesso ao app.
 
+Preço exibido: R$ 9,90 (pagamento único).
+
 Site estático (HTML/CSS/JS puro, sem dependências, ~130 KB). Projeto **independente**: não toca no aplicativo publicado em `metodo-recomeco-30.joaognunes22.workers.dev`, no Supabase nem no webhook.
 
 ```
