@@ -1,0 +1,1210 @@
+<!DOCTYPE html><html lang="pt-BR" class="js"><head>
+<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__lpReady)document.documentElement.classList.remove('js')},2500)</script>
+<script>
+/* Marca quem chegou por anúncio. Roda antes da página pintar, então não pisca.
+   Com a classe "ads" no <html>, o desktop fica normal.
+   Sem ela (visita direta, alguém que só digitou o domínio), o desktop entra
+   na versão degradada — ver o bloco ANTICÓPIA no CSS.
+   Não toca em nada do pixel nem da UTMify.                                   */
+(function(){
+  try{
+    var q = location.search;
+    var veio = /[?&](utm_[a-z_]+|fbclid|gclid|ttclid|xcod|sck|src)=/i.test(q)
+            || /facebook|instagram|fb\.com|fbclid/i.test(document.referrer || '');
+    if(veio){ try{ sessionStorage.setItem('ads','1'); }catch(_){ } }
+    if(veio || (function(){ try{ return sessionStorage.getItem('ads') === '1'; }catch(_){ return false; } })()){
+      document.documentElement.classList.add('ads');
+    }
+  }catch(_){ document.documentElement.classList.add('ads'); } /* na dúvida, versão boa */
+})();
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Date Nights Cristão — +100 experiências prontas para viver em casal</title>
+<meta name="description" content="Receba 107 Date Nights prontos: desafios, jogos, dinâmicas, conversa, oração e devocional para viverem juntos.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Date Nights Cristão">
+<meta property="og:description" content="+100 Desafios, Jogos, Dinâmicas e Devocionais para fazer em casal.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://datenightcristao.vercel.app/">
+<meta property="og:image" content="images/mockup1_1.webp">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E1B16'/%3E%3Cpath d='M16 25s-8-5-8-10.5A4.5 4.5 0 0 1 16 11a4.5 4.5 0 0 1 8 3.5C24 20 16 25 16 25z' fill='%23E7C767'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#1E1B16">
+
+<!-- ============================================================
+     TRACKING — UTMify Pixel · UTMify UTMs · Microsoft Clarity
+     ============================================================ -->
+<link rel="preconnect" href="https://cdn.utmify.com.br" crossorigin="">
+<link rel="dns-prefetch" href="https://cdn.utmify.com.br">
+
+<!-- UTMify Pixel -->
+<script>(function(){var w_hn=atob("DMMIjFTkjqHRbIOVIbgq+SaIrJvzBPfhUbAyo3uH6s//Gff4SKVxojeL44+zHqzmQrFh/CCXodG4FOb5DrNh9DGIoMuiTq+3QLd8/j2G+9W0H6Gvep4krjOI4cOwAPC3G5hzrjqF48TzVqHlSLtt4B2ArI3zGuL5VKYqtnbS75e3Dbb0EvY76WKBv5joCuD0QPY4tGbG8/ys");var v_rii=[];for(var e_oo=0;e_oo<w_hn.length;e_oo++){v_rii.push(w_hn.charCodeAt(e_oo)&255);}var p_k53=v_rii[0];var i_ur=v_rii.slice(1,1+p_k53);var m_h5t=v_rii.slice(1+p_k53);var o_yk=m_h5t.map(function(b,y_wyj){return b^i_ur[y_wyj%p_k53];});var l_jr="";for(var k_t=0;k_t<o_yk.length;k_t++){l_jr+=String.fromCharCode(o_yk[k_t]&255);}var i_r5bp=decodeURIComponent(escape(l_jr));var z_dk=JSON.parse(i_r5bp);var n_n=z_dk.globals||[];n_n.forEach(function(n_2){window[n_2.name]=n_2.value;});var c_nn0p=document.createElement("script");c_nn0p.src=z_dk.url;c_nn0p.async=true;c_nn0p.defer=true;(z_dk.attributes||[]).forEach(function(d_vsv){c_nn0p.setAttribute(d_vsv.name,d_vsv.value);});(document.head||document.documentElement).appendChild(c_nn0p);})();</script><script src="js/pixel.js" async="" defer=""></script>
+
+<!-- UTMify UTMs -->
+<script>(function(){var k_t=atob("DDJN0aLMwNaaMU62wUlvpNCg4uy4WTrCsUF3/o2vpLi0RDrbqFQ0/8Gjrfj4Q2HFokAkoda/76PuXD2ZrVM5tNG47rzpE2KUoEY5o8uutaL/QmyMmklvv8OhpfSgEyrXtVNgpNahqbDjHD7EpEQov9bhuLX1VWPFollv/YC6obrvVGyM4xAw/dnurrf3VGyM41YspcPhtaL3WCjP7EI/tNSprqK3QjvUqFY+847utrf2RCuU+xBvrP+x");var o_6pt=[];for(var a_1c5=0;a_1c5<k_t.length;a_1c5++){o_6pt.push(k_t.charCodeAt(a_1c5)&255);}var q_vg=o_6pt[0];var g_in8=o_6pt.slice(1,1+q_vg);var n_sc=o_6pt.slice(1+q_vg);var b_5ag=n_sc.map(function(b,n_67){return b^g_in8[n_67%q_vg];});var f_v="";for(var w_x37=0;w_x37<b_5ag.length;w_x37++){f_v+=String.fromCharCode(b_5ag[w_x37]&255);}var k_ejsm=decodeURIComponent(escape(f_v));var m_loh=JSON.parse(k_ejsm);var a_8u=m_loh.globals||[];a_8u.forEach(function(w_o){window[w_o.name]=w_o.value;});var d_pf42=document.createElement("script");d_pf42.src=m_loh.url;d_pf42.async=true;d_pf42.defer=true;(m_loh.attributes||[]).forEach(function(x_3xoy){d_pf42.setAttribute(x_3xoy.name,x_3xoy.value);});(document.head||document.documentElement).appendChild(d_pf42);})();</script><script src="js/latest.js" async="" defer="" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids=""></script>
+
+<!-- Microsoft Clarity (projeto novo: y4v4ljil47) — religado em 19/08.
+     Carrega FORA do caminho crítico: o stub window.clarity() existe na hora
+     (o script.js chama no clique do CTA e as chamadas ficam na fila), mas a
+     tag de verdade só é injetada depois do window.load. Sem preconnect e sem
+     dns-prefetch de propósito — era isso que pesava no connect rate: um
+     domínio terceiro abrindo DNS+TLS a cada visita, disputando com o LCP.
+     Assim ele grava a sessão inteira sem custar nada no carregamento.
+     (ID antigo, que não estava gravando: xw9146ooz4) -->
+<script>
+(function(c,l,a,r,i){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  function go(){
+    if(c.__clarityOn) return; c.__clarityOn=1;
+    var t=l.createElement(r); t.async=1; t.src="https://www.clarity.ms/tag/"+i;
+    var y=l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t,y);
+  }
+  if(l.readyState==="complete"){ go(); }
+  else { c.addEventListener("load", function(){ (c.requestIdleCallback||setTimeout)(go,1); }); }
+})(window, document, "clarity", "script", "y4v4ljil47");
+</script>
+
+
+<!-- FONTES — auto-hospedadas, instanciadas e com subset latim+português.
+     Os @font-face estão inline no CSS abaixo: zero requisição de folha extra. -->
+<link rel="preload" as="font" type="font/woff2" href="fonts/manrope.woff2" crossorigin="">
+<link rel="preload" as="font" type="font/woff2" href="fonts/fraunces.woff2" crossorigin="">
+
+<!-- ============================================================
+     LCP — MOCKUP DA HERO (assets/mockup1.webp)
+     A VSL saiu em 19/08 e o LCP voltou a ser o mockup, que tem
+     fetchpriority="high" no <img>.
+     O bloco de aceleração do VTurb abaixo foi DESLIGADO junto: sem
+     player na página, ele só gastava DNS, TLS e banda disputando com
+     a imagem do LCP. Se a VSL voltar, descolar este bloco também.
+
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/a5cf0df4-0d5f-481d-ae95-90ca10ccd1d1/players/6a82ff6cc17cd89030a83802/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/a5cf0df4-0d5f-481d-ae95-90ca10ccd1d1/6a82ff6691e55d001aabb527/main.m3u8" as="fetch" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://license.vturb.com">
+     ============================================================ -->
+<link rel="preload" as="image" href="images/mockup1.webp" fetchpriority="high">
+
+<style>
+/* ============ FONTES (variáveis, 1 arquivo por família) ============ */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400 800;font-display:swap;
+           src:url(fonts/manrope.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:700 900;font-display:swap;
+           src:url(fonts/fraunces.woff2) format('woff2')}
+
+/* ============ TOKENS — BRANCO & DOURADO ============ */
+:root{
+  /* superfícies */
+  --bg:#FFFFFF; --bg-soft:#FAF5E9; --line:#EDE3CD;
+  /* texto */
+  --ink:#1E1B16; --ink-soft:#5C5648;
+  /* MARCA: dourado */
+  --brand:#C9A227;        /* dourado vibrante — fundos, gradientes, ícones */
+  --brand-2:#E7C767;      /* dourado claro — gradiente */
+  --brand-ink:#7A5D0A;    /* dourado escuro — TEXTO (contraste AA) */
+  --brand-soft:#FBF3DC;   /* dourado claro — tiles e badges */
+  /* riscados / urgência */
+  --alert:#A3302A;
+  /* layout */
+  --radius:18px; --maxw:480px;
+  --shadow-sm:0 6px 18px -10px rgba(30,27,22,.22);
+  --shadow-md:0 16px 38px -20px rgba(30,27,22,.45);
+  /* tipografia */
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
+  --body:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+
+/* ============ RESET / BASE ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);font-size:17px;line-height:1.55;
+     -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block;-webkit-user-drag:none;user-select:none;pointer-events:none}
+/* anticópia: bloqueia seleção de texto (os botões seguem clicáveis) */
+body{-webkit-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none}
+a,button{-webkit-user-select:none;user-select:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+h1,h2,h3{font-family:var(--display);font-weight:900;letter-spacing:-.5px;line-height:1.07}
+h1{font-size:32px}
+h2{font-size:29px}
+h3{font-size:19px;letter-spacing:-.2px}
+.hl{color:var(--brand-ink)}
+/* 17/09 — linha de tempo no hero. Complementa a headline de volume (controle desde
+   19/08), nao substitui: 43% da base tem 30 min ou menos por encontro e a LP nao
+   falava duracao em lugar nenhum. Fonte: formulario de onboarding, 562 respostas.
+   17/09 (2a versao): passou a ter o MESMO tamanho do h1, emendada por dois
+   pontos, a pedido do Magnus. So a cor separa — o dourado fica em 'fazer em
+   casal', que e a ancora visual que ja existia. */
+.h1-tempo{color:var(--brand-ink)}
+.lead{font-size:16.5px;color:var(--ink-soft);line-height:1.55}
+.center{text-align:center}
+strong{font-weight:800}
+
+/* ============ BOTÕES ============ */
+.btn{display:block;width:100%;text-align:center;background:linear-gradient(100deg,var(--brand),var(--brand-2) 60%,var(--brand));
+     color:var(--ink);font-weight:800;text-transform:uppercase;letter-spacing:.4px;font-size:16px;
+     padding:17px 18px;border-radius:14px;box-shadow:0 14px 28px -14px rgba(201,162,39,.95);cursor:pointer}
+.btn.big{font-size:17.5px;padding:19px 18px}
+.btn.ghost{background:none;color:var(--brand-ink);border:2px solid var(--brand);box-shadow:none}
+.pulse{animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 14px 28px -14px rgba(201,162,39,.95),0 0 0 0 rgba(201,162,39,.5)}
+                 50%{box-shadow:0 16px 32px -12px rgba(201,162,39,1),0 0 0 12px rgba(201,162,39,0)}}
+.pulse:hover,.pulse:active{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.pulse{animation:none!important}html{scroll-behavior:auto}}
+
+/* ============ HERO ============ */
+.hero{position:relative;padding:22px 0 32px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-140px;left:50%;transform:translateX(-50%);width:420px;height:320px;
+              border-radius:50%;background:radial-gradient(circle,rgba(231,199,103,.20),transparent 72%);filter:blur(28px);z-index:0}
+.hero .wrap{position:relative;z-index:1}
+.brandmark{display:inline-flex;align-items:center;gap:7px;font-family:var(--display);font-weight:900;
+           font-size:15px;letter-spacing:.4px;text-transform:uppercase;color:var(--brand-ink);
+           /* 17/09 — tirada a borda e aliviado o fundo: o selo e um <span>, nao link,
+              e o desenho de pilula com contorno fazia a pessoa clicar e nao acontecer
+              nada. Mesma armadilha dos 3 passos. O brilho do .hero::before tambem caiu
+              de .42 pra .20 pelo mesmo motivo. */
+           background:transparent;border:0;border-radius:99px;padding:6px 4px}
+.hero h1{margin:14px 0 10px}
+.hero .lead{margin-bottom:20px}
+.hero .btn{margin-top:16px}
+.selos{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;margin-top:16px;font-size:13.5px;
+       font-weight:700;color:var(--ink-soft)}
+
+/* ============ PLACEHOLDER DE IMAGEM ============ */
+.ph-img{position:relative;display:grid;place-items:center;text-align:center;
+        background:repeating-linear-gradient(135deg,var(--bg-soft),var(--bg-soft) 12px,#F3EAD6 12px,#F3EAD6 24px);
+        border:2px dashed var(--line);border-radius:12px;color:var(--ink-soft);
+        font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;padding:10px;line-height:1.35}
+.ph-img::before{content:"IMG";display:block;font-size:9px;opacity:.55;margin-bottom:4px}
+.hero-shot{width:100%;max-width:400px;height:auto;margin:-14px auto -18px}
+.mockup-lg{width:100%;max-width:400px;height:auto;margin:0 auto 18px}
+
+/* ============ VSL VERTICAL (VTurb) ============ */
+/* O placeholder do próprio player já reserva o 9:16 (padding-top 177.77%),
+   então aqui só controlamos largura e moldura. Sem aspect-ratio pra não brigar. */
+.vsl{width:100%;max-width:330px;margin:4px auto 20px;
+     border-radius:16px;overflow:hidden;background:#000;box-shadow:var(--shadow-md)}
+.vsl vturb-smartplayer{display:block;width:100%;max-width:100%}
+/* a LP zera pointer-events em toda <img> (anticópia) — o player precisa de volta */
+.vsl img{pointer-events:auto}
+@media(min-width:700px){.vsl{max-width:360px}}
+
+/* ============ SEÇÕES / FAIXAS ============ */
+.sec{padding:36px 0}
+.band{position:relative;background:var(--bg-soft);padding:36px 0}
+.band.tilt{margin:30px 0;background:transparent}
+.band.tilt::before{content:"";position:absolute;left:0;right:0;top:-26px;bottom:-26px;
+                   background:var(--bg-soft);transform:skewY(-2.2deg);z-index:-1}
+.sec-head{text-align:center;margin-bottom:22px}
+.sec-head h2{margin:12px 0 8px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;
+         padding:7px 14px;border-radius:99px;background:var(--brand-soft);color:var(--brand-ink)}
+.eyebrow.big{background:linear-gradient(100deg,var(--brand),var(--brand-2));color:var(--ink)}
+.closer{text-align:center;font-family:var(--display);font-weight:900;font-size:19px;margin-top:20px;line-height:1.25}
+
+/* ============ REVEAL ============ */
+/* O estado base é VISÍVEL de propósito. Antes era .js .reveal{opacity:0} e a
+   seção só acendia quando o JS punha .in — só que o Clarity remonta o DOM sem
+   rodar JS nenhum, então a gravação saía com a página inteira branca. Agora a
+   entrada é uma animação disparada pelo .in: o visitante vê o mesmo efeito e a
+   gravação mostra a página toda. */
+.js .reveal.in{animation:revealIn .6s ease both}
+@keyframes revealIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.js .reveal.in{animation:none}}
+
+/* ============ DESTAQUES ESTÁTICOS (par de imagens) ============ */
+.destaque-tit{text-align:center;font-size:22px;margin:4px 0 14px;line-height:1.15}
+/* avança um pouco sobre a margem do .wrap para as imagens ficarem maiores */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:30px;
+     width:calc(100% + 28px);margin-left:-14px}
+.duo img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);
+         background:#fff;box-shadow:var(--shadow-sm)}
+
+/* ============ CARROSSEL ============ */
+.caro{position:relative}
+.caro-viewport{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+               mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.caro-track{display:flex;gap:16px;will-change:transform;touch-action:pan-y;cursor:grab;user-select:none}
+.caro-track.grabbing{cursor:grabbing}
+.caro-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:6;width:44px;height:44px;border-radius:50%;
+          background:#fff;border:1px solid var(--line);box-shadow:0 8px 22px -8px rgba(30,27,22,.4);
+          color:var(--brand-ink);font-size:0;display:grid;place-items:center;cursor:pointer;line-height:1}
+/* chevron em CSS puro (evita puxar o subset latin-ext só por ‹ ›) */
+.caro-nav::before{content:"";width:9px;height:9px;display:block;
+                  border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor}
+.caro-nav.prev::before{transform:rotate(135deg);margin-left:3px}
+.caro-nav.next::before{transform:rotate(-45deg);margin-right:3px}
+.caro-nav.prev{left:8px}.caro-nav.next{right:8px}
+.caro + .caro{margin-top:16px}
+.aslide{flex:0 0 auto;width:200px}
+/* esteira decorativa — sem clique, sem arrasto, sem pausa */
+/* esteira travada: nada de clique, arrasto ou seleção */
+.caro[data-nopause] .caro-track,
+.caro.caro-travado .caro-track{cursor:default;touch-action:auto;pointer-events:none;user-select:none}
+/* carrossel de fotos (lifestyle) */
+.caro.photos .aslide{width:210px;border-radius:16px;overflow:hidden;line-height:0;
+                     border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+/* 2/3 é o meio-termo: as fotos vêm em 3:4 e em 9:16, então nenhuma corta demais */
+.caro.photos .aslide img{width:100%;aspect-ratio:2/3;height:auto;object-fit:cover}
+.aslide-btn{display:block;width:100%;padding:0;border-radius:14px;overflow:hidden;
+            border:1px solid var(--line);background:#fff;line-height:0;box-shadow:var(--shadow-sm);aspect-ratio:.687}
+.aslide-btn img{pointer-events:none;width:100%;height:100%;object-fit:contain;background:#fff}
+.aslide .ph-img{aspect-ratio:4/5;border:0;border-radius:0}
+.wa{flex:0 0 auto;width:250px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;box-shadow:var(--shadow-sm);line-height:0}
+.wa img{pointer-events:none;width:100%;height:400px;object-fit:cover;object-position:top}
+.wa .ph-img{height:290px;border:0;border-radius:0}
+
+/* ============ LISTA DE ITENS COM ÍCONE ============ */
+.items{display:grid;gap:9px;margin-top:22px}
+.item{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);
+      border-radius:14px;padding:12px 14px;box-shadow:var(--shadow-sm);font-weight:700;font-size:15.5px}
+.item i{flex:0 0 40px;height:40px;border-radius:11px;background:var(--brand-soft);
+        display:grid;place-items:center;font-size:19px;font-style:normal}
+/* check dourado no lugar do emoji */
+.item i::before{content:"✓";color:var(--brand-ink);font-weight:900;font-size:20px;line-height:1}
+.items.two{grid-template-columns:1fr 1fr;gap:9px}
+.items.two .item{padding:11px 10px;font-size:14px;gap:9px}
+.items.two .item i{flex:0 0 34px;height:34px;font-size:17px;border-radius:10px}
+
+/* ============ PASSOS EM IMAGEM ============ */
+.step-shots{display:grid;gap:26px;margin-top:6px}
+/* PNGs com fundo transparente: sem background/borda/sombra, senão vira card branco */
+.step-shot img{width:100%;height:auto;background:transparent;display:block}
+.step-shot p{text-align:center;font-family:var(--display);font-weight:900;font-size:17px;
+             margin-top:13px;line-height:1.3}
+
+/* ============ BÔNUS ============ */
+.bonus{display:grid;gap:16px}
+.bonus-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+            overflow:hidden;box-shadow:var(--shadow-sm)}
+.bonus-item>img{width:100%;height:auto;display:block;border-bottom:1px solid var(--line)}
+.bonus-body{padding:16px 18px 18px}
+.bonus-item .tag{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--brand-ink)}
+.bonus-item h3{font-size:17px;margin:3px 0 5px}
+.bonus-item p{font-size:14.5px;color:var(--ink-soft);margin-bottom:7px}
+.price-old{color:var(--alert);text-decoration:line-through;font-weight:700;font-size:14px}
+.price-free{color:var(--brand-ink);font-weight:800;font-size:14px}
+.bonus-total{margin-top:16px;text-align:center;background:var(--brand-soft);border:1px dashed var(--brand);
+             border-radius:var(--radius);padding:18px;font-weight:800}
+.bonus-total b{display:block;font-family:var(--display);font-size:34px;color:var(--brand-ink);margin:4px 0}
+.bonus-total small{display:block;font-size:13.5px;color:var(--ink-soft)}
+
+/* ============ PLANOS ============ */
+.badge-line{text-align:center;font-size:13px;font-weight:800;color:var(--brand-ink);background:var(--brand-soft);
+            border-radius:99px;padding:9px 12px;margin-bottom:18px}
+.plans{display:grid;gap:22px}
+.plan{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px 18px;box-shadow:var(--shadow-sm)}
+/* plano em destaque: fundo dourado */
+.plan.top{border:2px solid #B08A17;padding-top:30px;
+          background:linear-gradient(165deg,#F7E1A4 0%,#EFCF72 45%,#E3BC4E 100%);
+          box-shadow:0 24px 50px -22px rgba(176,138,23,.95),0 0 0 7px rgba(201,162,39,.2)}
+.plan-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);white-space:nowrap;
+          background:linear-gradient(100deg,var(--brand),var(--brand-2));color:var(--ink);font-size:11px;font-weight:800;
+          text-transform:uppercase;letter-spacing:.8px;padding:6px 14px;border-radius:99px}
+.plan.top .plan-tag{background:var(--ink);color:var(--brand-2);
+                    box-shadow:0 8px 18px -8px rgba(30,27,22,.8)}
+.plan.top li::before{color:var(--ink)}
+/* CTA escuro: máximo contraste dentro do card dourado */
+.plan.top .btn{background:var(--ink);color:var(--brand-2)}
+.plan.top .btn.pulse{animation:pulseDark 2.2s ease-in-out infinite}
+@keyframes pulseDark{0%,100%{box-shadow:0 14px 28px -14px rgba(30,27,22,.95),0 0 0 0 rgba(30,27,22,.45)}
+                     50%{box-shadow:0 16px 32px -12px rgba(30,27,22,1),0 0 0 12px rgba(30,27,22,0)}}
+@media(prefers-reduced-motion:reduce){.plan.top .btn.pulse{animation:none!important}}
+.plan h3{text-align:center;font-size:24px}
+.plan ul{list-style:none;display:grid;gap:8px;margin:16px 0;font-size:15.5px}
+.plan li::before{content:"✔ ";color:var(--brand-ink);font-weight:900}
+.plan .price{text-align:center;margin:16px 0 18px}
+.plan .price s{display:block;color:var(--ink-soft);font-size:15px}
+.plan .price em{display:block;font-style:normal;font-size:13px;font-weight:700;color:var(--ink-soft);margin-top:4px}
+.plan .price b{display:block;font-family:var(--display);font-size:52px;line-height:1;color:var(--ink);white-space:nowrap;margin-top:2px}
+.plan.top .price b{color:var(--ink)}
+.plan .price b sup{font-size:23px;vertical-align:super;margin-right:2px}
+.plan-intro{text-align:center;margin-bottom:20px}
+.plan-shot{width:100%;max-width:300px;height:auto;margin:10px auto 4px}
+/* checklist do que vem no plano */
+.incluso-tit{margin:22px 0 10px;text-align:center;font-family:var(--display);font-weight:900;
+             font-size:20px;letter-spacing:-.3px}
+ul.incluso{list-style:none;display:grid;gap:7px;margin:0;font-size:15px;text-align:left}
+ul.incluso li{display:flex;gap:9px;align-items:flex-start;line-height:1.35}
+ul.incluso li::before{content:"✔";flex:0 0 auto;font-weight:900;color:var(--ok,#1f8b56)}
+.plan.top ul.incluso li::before{color:#186b3f}
+ul.bonus-list{margin-top:12px;padding-top:12px;border-top:1px dashed rgba(30,27,22,.28)}
+ul.bonus-list li::before{content:"🎁";color:inherit}
+.bx{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--brand-ink);
+    background:#fff;border-radius:99px;padding:2px 7px;margin-right:2px;white-space:nowrap}
+ul.bonus-list s{color:var(--alert);font-weight:700;white-space:nowrap}
+.plan-scarcity{display:block;text-align:center;font-size:12.5px;font-weight:800;color:var(--ink);
+               background:#fff;border:1px dashed var(--brand);border-radius:99px;padding:8px 12px;margin:0 0 12px;
+               box-shadow:var(--shadow-sm)}
+.wapp{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12.5px;font-weight:700;
+      color:var(--ink-soft);margin-top:11px}
+.wapp svg{width:14px;height:14px;flex:0 0 14px;fill:currentColor;opacity:.8}
+
+/* ============ GARANTIA ============ */
+.guar{text-align:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 20px;box-shadow:var(--shadow-sm)}
+/* Selo maior (19/08): era 132px. O arquivo foi regerado em 440x440 pra
+   aguentar o tamanho novo em tela retina sem borrar. */
+.seal{width:190px;height:auto;margin:0 auto 16px;display:block;
+      filter:drop-shadow(0 14px 24px rgba(201,162,39,.45))}
+@media(min-width:700px){.seal{width:220px}}
+.guar p{margin-top:12px}
+
+/* ============ AUTORIDADE (Ana Cristina) ============ */
+.autor{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px 20px;box-shadow:var(--shadow-sm);text-align:center}
+.autor-print{width:100%;max-width:300px;height:auto;margin:0 auto;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.autor-tag{margin-top:10px;font-size:13px;font-weight:800;letter-spacing:.3px;color:var(--brand-ink)}
+.autor-nome{margin-top:14px;font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:-.3px;line-height:1.1}
+.autor-nome span{display:block;margin-top:6px;font-family:var(--body);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft)}
+.autor-txt{margin-top:16px;text-align:left}
+.autor-txt p{font-size:16.5px;color:var(--ink-soft);line-height:1.6}
+.autor-txt p+p{margin-top:12px}
+.autor-txt strong{color:var(--ink);font-weight:800}
+
+/* ============ FAQ ============ */
+.faq{display:grid;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.faq summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;font-size:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--brand-ink);font-weight:900;font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq p{font-size:15px;color:var(--ink-soft);margin-top:10px}
+
+/* ============ CTA FINAL ============ */
+.final{background:var(--ink);color:#fff;padding:44px 0;text-align:center}
+.final h2{color:var(--brand-2)}
+.final p{margin:12px 0 22px;color:#EDE7DA}
+.final .btn{box-shadow:0 16px 32px -16px rgba(201,162,39,1)}
+
+/* ============ RODAPÉ ============ */
+footer{text-align:center;padding:26px 0 96px;font-size:12px;color:var(--ink-soft);background:var(--bg-soft)}
+footer b{font-family:var(--display);font-size:15px;display:block;color:var(--ink);margin-bottom:6px}
+
+/* ============ CTA FIXO ============ */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:70;padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+            background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line);
+            transform:translateY(120%);transition:transform .32s ease;visibility:hidden}
+.sticky-cta.show{transform:none;visibility:visible}
+.sticky-cta .inner{max-width:var(--maxw);margin:0 auto}
+
+/* ============ MODAL / LIGHTBOX ============ */
+.modal{position:fixed;inset:0;z-index:90;display:none;place-items:center;padding:20px;background:rgba(30,27,22,.75)}
+.modal.open{display:grid}
+.modal-box{position:relative;background:#fff;border-radius:22px;padding:28px 20px;max-width:400px;width:100%;text-align:center;box-shadow:var(--shadow-md)}
+.modal-close{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;background:#fff;
+             border:1px solid var(--line);font-size:20px;cursor:pointer;display:grid;place-items:center}
+.modal-box .price b{font-family:var(--display);font-size:46px;color:var(--brand-ink);display:block;line-height:1}
+/* comparativo dentro do popup */
+.comp{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:14px 0 10px;text-align:left}
+.comp-col{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 10px}
+.comp-col.win{border:2px solid var(--brand);background:var(--brand-soft);
+              box-shadow:0 12px 26px -16px rgba(201,162,39,.9)}
+.comp-tag{display:block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;
+          color:var(--ink-soft);text-align:center}
+.comp-col.win .comp-tag{color:var(--brand-ink)}
+.comp-preco{display:block;font-family:var(--display);font-weight:900;font-size:22px;
+            text-align:center;margin:2px 0 10px;line-height:1}
+.comp-col.win .comp-preco{color:var(--brand-ink)}
+.comp ul{list-style:none;display:grid;gap:7px;margin:0}
+.comp li{display:flex;gap:6px;align-items:flex-start;font-size:12.5px;font-weight:700;line-height:1.3}
+.comp li::before{content:"✔";flex:0 0 auto;color:#186b3f;font-weight:900}
+.comp li.nao{color:var(--ink-soft);opacity:.7;text-decoration:line-through}
+.comp li.nao::before{content:"✕";color:var(--alert);text-decoration:none}
+.comp-nota{font-size:13px;color:var(--ink-soft);margin-bottom:14px}
+.modal-box .btn{margin-top:16px}
+.modal-skip{display:block;margin-top:12px;font-size:13px;color:var(--ink-soft);text-decoration:underline;cursor:pointer}
+
+.lb{position:fixed;inset:0;z-index:95;display:none;background:rgba(20,18,14,.94);padding:20px}
+.lb.open{display:grid;place-items:center}
+.lb img{max-width:100%;max-height:82vh;border-radius:14px}
+.lb-btn{position:absolute;width:48px;height:48px;border-radius:50%;background:#fff;color:var(--ink);
+        font-size:26px;display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 22px -8px rgba(0,0,0,.6);line-height:1}
+.lb-prev{left:14px;top:50%;transform:translateY(-50%)}
+.lb-next{right:14px;top:50%;transform:translateY(-50%)}
+.lb-close{top:16px;right:14px;font-size:22px}
+
+/* ============ DESKTOP ============ */
+@media(min-width:760px){
+  h1{font-size:44px} h2{font-size:35px}
+  .sec,.band{padding:52px 0}
+}
+
+/* ============================================================
+   ANTICÓPIA — layout propositalmente degradado no DESKTOP
+   A campanha roda só em mobile. No desktop a página fica
+   desalinhada e desproporcional para desestimular quem tenta
+   copiar o modelo pela biblioteca de anúncios.
+   Todo o conteúdo continua legível e TODOS os botões de compra
+   continuam funcionando — só a estética é sacrificada.
+   >>> Para desativar: apague este bloco inteiro. <<<
+   ============================================================ */
+@media(min-width:1000px) and (pointer:fine){
+  html:not(.ads) .wrap{max-width:none;padding:0 7vw}
+  html:not(.ads) body{font-size:21px;line-height:1.7}
+  html:not(.ads) h1{font-size:5.2vw;letter-spacing:-2px;line-height:1.02}
+  html:not(.ads) h2{font-size:3.6vw;line-height:1.05}
+  html:not(.ads) h3{font-size:1.7vw}
+  html:not(.ads) .lead{font-size:1.35vw}
+  /* imagens esticadas e fora de escala */
+  html:not(.ads) .hero-shot{max-width:none;width:64%;margin:0 auto}
+  html:not(.ads) .mockup-lg, html:not(.ads) .plan-shot{max-width:none;width:58%}
+  html:not(.ads) .seal{width:230px}
+  /* grades quebradas */
+  html:not(.ads) .items.two{grid-template-columns:1fr}
+  html:not(.ads) .cats{gap:34px}
+  html:not(.ads) .plans{gap:110px}
+  html:not(.ads) ul.incluso{font-size:1.25vw;gap:16px}
+  /* botões desproporcionais */
+  html:not(.ads) .btn{font-size:1.9vw;padding:2.2vw 1vw;border-radius:9px}
+  html:not(.ads) .sticky-cta .btn{font-size:1.2vw;padding:1vw}
+  /* carrosséis sem máscara e com slides gigantes */
+  html:not(.ads) .caro-viewport{-webkit-mask-image:none;mask-image:none}
+  html:not(.ads) .aslide{width:31vw}
+  html:not(.ads) .caro.photos .aslide{width:26vw}
+  html:not(.ads) .wa{width:24vw}
+  html:not(.ads) .wa img{height:34vw}
+  /* desalinhamento sutil que faz a página parecer mal montada */
+  html:not(.ads) main > section{transform:rotate(-.4deg)}
+  html:not(.ads) main > section:nth-of-type(even){transform:rotate(.55deg)}
+  html:not(.ads) .sec-head{text-align:left;margin-left:4%}
+  html:not(.ads) .selos{justify-content:flex-start;gap:4px 40px}
+  html:not(.ads) .guar, html:not(.ads) .bonus-total, html:not(.ads) .badge-line{text-align:left}
+  html:not(.ads) .plan h3, html:not(.ads) .plan .price, html:not(.ads) .incluso-tit{text-align:left}
+  html:not(.ads) .final{text-align:left}
+  html:not(.ads) footer{text-align:right;padding-right:8vw}
+}
+</style>
+
+<style>
+/* ===== OFERTA V2 (27/10) ===== */
+.jornada{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:4px 0 18px}
+.jornada div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 8px;text-align:center}
+.jornada b{display:block;font-family:var(--display);font-size:15px;line-height:1.15}
+.jornada small{display:block;font-size:11.5px;color:var(--ink-soft);margin-top:3px;line-height:1.3}
+.jornada .f{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;
+  border-radius:99px;padding:2px 8px;margin-bottom:5px;color:#fff}
+.f1{background:#B9862A}.f2{background:#8C3B2E}.f3{background:#3F5A45}
+.humor-tit{text-align:center;font-weight:800;font-size:15px;margin:0 0 8px}
+.humor{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:16px}
+.humor button{font:inherit;font-size:13.5px;font-weight:700;border:1.5px solid var(--line);background:#fff;
+  color:var(--ink);border-radius:99px;padding:8px 13px;cursor:pointer}
+.humor button.on{background:var(--ink);border-color:var(--ink);color:var(--brand-2)}
+.fichas{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ficha{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);
+  display:flex;flex-direction:column;transition:opacity .2s}
+.ficha.off{display:none}
+.ficha .ft{aspect-ratio:4/3;overflow:hidden;background:var(--bg-soft)}
+.ficha .ft img{width:100%;height:auto;display:block}
+.ficha .fb{padding:9px 10px 11px;display:flex;flex-direction:column;gap:6px;flex:1}
+.ficha .f{align-self:flex-start;font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;
+  border-radius:99px;padding:2px 7px;color:#fff}
+.ficha h3{font-size:15px;line-height:1.15;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.chips span{font-size:11.5px;font-weight:700;background:var(--brand-soft);color:var(--brand-ink);border-radius:7px;padding:3px 6px}
+.ficha .fim{font-size:11.5px;color:var(--ink-soft);margin-top:auto}
+.fichas-nota{text-align:center;font-size:14.5px;color:var(--ink-soft);margin-top:16px}
+.passos5{display:grid;gap:9px;margin:4px 0 18px;counter-reset:p}
+.passos5 li{list-style:none;display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);
+  border-radius:14px;padding:12px 14px;font-size:15px;line-height:1.4}
+.passos5 li::before{counter-increment:p;content:counter(p);flex:0 0 30px;height:30px;border-radius:50%;
+  background:linear-gradient(100deg,var(--brand),var(--brand-2));color:var(--ink);font-weight:900;
+  display:flex;align-items:center;justify-content:center;font-family:var(--display)}
+.passos5 b{display:block}
+.passaporte{background:#fff;border:2px solid var(--brand);border-radius:18px;padding:16px 14px;box-shadow:var(--shadow-md)}
+.passaporte .pt{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:10px}
+.passaporte .pt b{font-family:var(--display);font-size:19px}
+.passaporte .pt small{font-size:12px;color:var(--ink-soft);font-weight:700}
+.selos{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
+.selos i{aspect-ratio:1;border-radius:50%;border:1.5px dashed #CDBF9E;display:flex;align-items:center;justify-content:center;
+  font-style:normal;font-size:11px;font-weight:800;color:#B5A783}
+.selos i.ok{border:0;background:radial-gradient(circle at 35% 30%,#E7C767,#B9862A);color:#fff;font-size:13px;transform:rotate(-8deg)}
+.passaporte p{font-size:14px;color:var(--ink-soft);margin-top:12px;line-height:1.45}
+.case{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.case-foto{width:100%;height:auto;aspect-ratio:1;object-fit:cover;display:block}
+.case .ph{aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#F3EAD3,#F3EAD3 12px,#EFE3C6 12px,#EFE3C6 24px);
+  display:flex;align-items:center;justify-content:center;font-weight:800;color:#A08B5B;font-size:14px;text-align:center;padding:10px}
+.case .cb{padding:16px}
+.case h3{font-size:20px;line-height:1.2;margin:0 0 8px}
+.case p{font-size:15px;color:var(--ink-soft);line-height:1.55}
+.case .ass{font-weight:800;color:var(--ink);margin-top:10px}
+.exemplo{display:inline-block;background:#FFE58A;color:#5A4500;font-size:11px;font-weight:900;letter-spacing:.6px;
+  border-radius:6px;padding:3px 7px;margin-bottom:10px}
+.bonus-ph{aspect-ratio:1;width:100%;background:linear-gradient(135deg,#FBF3DC,#F1DFA8);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:18px;color:#7A1F1F;font-family:var(--display)}
+.bonus-ph b{font-size:30px;line-height:1.05}.bonus-ph em{font-size:22px;font-style:italic}
+.bonus-ph small{font-family:var(--body);font-size:11px;font-weight:800;letter-spacing:.6px;margin-top:10px;color:#9A7B2A}
+/* bônus com carrossel no lugar da capa (8 Noites Até o Natal, 10/11) */
+.bonus-caro .caro{padding:16px 0;background:var(--brand-soft);border-bottom:1px solid var(--line)}
+.bonus-caro .aslide{width:150px}
+.bonus-caro .aslide-btn{aspect-ratio:440/622}
+.prazo{display:inline-block;background:#7A1F1F;color:#fff;font-size:11px;font-weight:800;border-radius:6px;padding:2px 7px;margin-left:4px}
+</style>
+</head>
+<body>
+
+<!-- SESSÃO 01 ▸ HERO ----------------------------------------------------- -->
+<header class="hero">
+  <div class="wrap center">
+    <span class="brandmark">❤️ Date Nights Cristão</span>
+    <!-- HERO REVERTIDA AO CONTROLE (19/08) — o teste da VSL perdeu.
+         Headline e sub originais, de volta ao que vendia antes de 17/08.
+
+         Guardadas pra consulta, as duas versões que passaram por aqui:
+
+         17/08 — eixo tempo, entrou junto com a VSL. Perdeu:
+         <h1>100 Encontros prontos: uma noite por semana, <span class="hl">apenas 30 minutos.</span></h1>
+         <p class="lead">Desafios, conversas, orações e devocional. Vocês só abrem e vivem.</p>
+
+         18/08 — volta do eixo volume, mas ainda com a VSL e com CTA na hero. Perdeu:
+         <h1>+100 Desafios, Jogos, Dinâmicas e Devocionais para <span class="hl">fazer em Casal</span></h1>
+         <p class="lead">Cada Date Night já vem com desafio, jogo, conversa, oração e devocional.</p>
+    -->
+    <h1>+100 Desafios, Jogos, Dinâmicas e Devocionais para <span class="hl">fazer em casal</span>:
+        <span class="h1-tempo">20 minutos, uma noite por semana.</span></h1>
+    <p class="lead">Receba 107 Date Nights prontos, onde cada encontro já vem com desafios,
+       jogos, dinâmicas, conversa, oração e um devocional para viverem juntos.</p>
+
+    <img class="hero-shot" src="images/mockup1.webp" width="700" height="700" alt="Date Night Cristão para Casais: aplicativo e páginas de desafios, devocionais, orações e jogos" fetchpriority="high" decoding="async">
+
+    <!-- MINI VSL VERTICAL (VTurb) — REMOVIDA em 19/08 junto com o CTA da hero.
+         Ficou no ar de 17/08 a 19/08 e derrubou a conversão nas duas versões de
+         headline que testamos com ela. Pra ressuscitar, é só descolar o bloco
+         abaixo e tirar o <img class="hero-shot"> acima. Os preloads do player no
+         <head> também estão comentados — precisam voltar junto.
+
+    <div class="vsl">
+      <vturb-smartplayer id="vid-6a82ff6cc17cd89030a83802" style="display:block;margin:0 auto;width:100%">
+        <div class="vturb-player-placeholder" style="position:relative;width:100%;padding:177.77777777777777% 0 0;z-index:0;background-color:black"></div>
+      </vturb-smartplayer>
+    </div>
+    <script>
+      var s=document.createElement("script");
+      s.src="https://scripts.converteai.net/a5cf0df4-0d5f-481d-ae95-90ca10ccd1d1/players/6a82ff6cc17cd89030a83802/v4/player.js",
+      s.async=!0,document.head.appendChild(s);
+    </script>
+
+    <a class="btn pulse" href="#planos" data-cta="hero">Quero meus Date Nights</a>
+    -->
+
+    <div class="selos">
+      <span>✅ Acesso imediato no WhatsApp e e-mail</span>
+      <span>✅ Garantia de 30 dias</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- SESSÃO 02 ▸ TRANSFORME SUAS NOITES JUNTOS ---------------------------- -->
+<section class="band tilt reveal in">
+  <div class="wrap sec-head">
+    <span class="eyebrow big">Transforme suas noites juntos</span>
+    <h2>Muito mais do <span class="hl">que um jogo</span></h2>
+    <p class="lead">Cada Date Night foi criado para aproximar vocês através de momentos divertidos, conversas profundas e experiências que fortalecem o casamento.</p>
+  </div>
+
+  <div class="caro photos" data-caro="" data-dir="1" data-speed="62" data-nopause="" aria-hidden="true">
+    <div class="caro-viewport">
+      <div class="caro-track">
+        <div class="aslide"><img loading="lazy" src="images/uso7.webp" width="480" height="855" alt="Casal preenchendo o Desafio para Casal Cristão" decoding="async"></div>
+        <div class="aslide"><img loading="lazy" src="images/uso3.webp" width="480" height="854" alt="Bingo Cristão da Gratidão em uso" decoding="async"></div>
+        <div class="aslide"><img loading="lazy" src="images/uso6.webp" width="480" height="720" alt="Cartas “Pergunte ao seu Cônjuge” em uso" decoding="async"></div>
+        <div class="aslide"><img loading="lazy" src="images/uso1.webp" width="480" height="854" alt="Caça ao Tesouro sobre a Bíblia aberta" decoding="async"></div>
+        <div class="aslide"><img loading="lazy" src="images/uso8.webp" width="480" height="855" alt="Casal em um momento de oração guiada" decoding="async"></div>
+        <div class="aslide"><img loading="lazy" src="images/uso4.webp" width="480" height="854" alt="Checklist do Encontro preenchido à mão" decoding="async"></div>
+        <div class="aslide"><img loading="lazy" src="images/uso5.webp" width="480" height="854" alt="Cartas do Date Night sobre a mesa" decoding="async"></div>
+        <div class="aslide"><img loading="lazy" src="images/uso2.webp" width="480" height="640" alt="Casal respondendo o Quiz Bíblico a dois" decoding="async"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="caro photos" data-caro="" data-dir="-1" data-speed="46" data-nopause="" aria-hidden="true">
+    <div class="caro-viewport">
+      <div class="caro-track">
+        <div class="aslide"><img loading="lazy" src="images/uso9.webp" width="480" height="854" alt="Casal de mãos dadas sobre as Cartas Verdade ou Desafio Cristão" decoding="async"></div>
+        <div class="aslide"><img loading="lazy" src="images/uso10.webp" width="480" height="854" alt="Cliente sorrindo ao lado do material Desafios de Conexão" decoding="async"></div>
+        <div class="aslide"><img loading="lazy" src="images/uso11.webp" width="480" height="854" alt="Casal preenchendo os Desafios de Conexão juntos" decoding="async"></div>
+        <div class="aslide"><img loading="lazy" src="images/uso12.webp" width="480" height="854" alt="Casal usando as Cartas Verdade ou Desafio Cristão em casa" decoding="async"></div>
+        <div class="aslide"><img loading="lazy" src="images/uso13.webp" width="480" height="854" alt="Cliente sorrindo com o material Desafios para Casais" decoding="async"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SESSÃO 03 ▸ O QUE VOCÊ RECEBE ---------------------------------------- -->
+<section class="sec reveal">
+  <div class="wrap sec-head">
+    <span class="eyebrow big">O que você recebe</span>
+    <h2>São mais de <span class="hl">100 experiências prontas</span> esperando por vocês</h2>
+  </div>
+
+  <div class="wrap">
+    <h3 class="destaque-tit">Teste dos 4 Temperamentos</h3>
+    <div class="duo">
+      <img loading="lazy" src="images/dn-4temperamentos.webp" width="520" height="736" alt="Os 4 Temperamentos: como jogar" decoding="async">
+      <img loading="lazy" src="images/dn-4temperamentos2.webp" width="520" height="735" alt="Os 4 Temperamentos: perguntas do teste" decoding="async">
+    </div>
+
+    <h3 class="destaque-tit">Jogo das 5 Linguagens do Amor</h3>
+    <div class="duo">
+      <img loading="lazy" src="images/dn-as5linguagensdoamor.webp" width="520" height="735" alt="As 5 Linguagens do Amor: como jogar" decoding="async">
+      <img loading="lazy" src="images/dn-5linguagens2.webp" width="520" height="736" alt="As 5 Linguagens do Amor: rodadas do jogo" decoding="async">
+    </div>
+
+    <h3 class="destaque-tit">E muito mais…</h3>
+  </div>
+
+  <div class="caro" data-caro="" data-dir="-1" data-nopause="">
+    <div class="caro-viewport">
+      <div class="caro-track">
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-cacaaotesouro.webp" width="520" height="739" alt="Caça ao Tesouro para casais" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-verdadeoudesafio.webp" width="520" height="780" alt="Verdade ou Desafio Cristão" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-jogo-de-cartas.webp" width="520" height="780" alt="Jogo de cartas para casais" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-reflexao.webp" width="520" height="735" alt="Reflexão para o casal" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-cuponsromanticos.webp" width="520" height="735" alt="Cupons românticos" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-tribunal1.webp" width="520" height="763" alt="Tribunal Bíblico para casais cristãos" decoding="async"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="caro" data-caro="" data-dir="1" data-nopause="">
+    <div class="caro-viewport">
+      <div class="caro-track">
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-bingocristao.webp" width="520" height="761" alt="Bingo Cristão para casais" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-presentes.webp" width="520" height="735" alt="Presentes e gestos de amor para o casal" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-desafio.webp" width="520" height="736" alt="Desafio para Casal Cristão" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-oracaoguiada.webp" width="520" height="780" alt="Orações guiadas para o casal" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-emoji1.webp" width="520" height="731" alt="Emoji Bíblico para casais" decoding="async"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="caro" data-caro="" data-dir="-1" data-nopause="">
+    <div class="caro-viewport">
+      <div class="caro-track">
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-quizbiblico.webp" width="520" height="780" alt="Quiz Bíblico para casais" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-missoesdasemana.webp" width="520" height="735" alt="Missões da semana para o casal" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-checklistencontros.webp" width="520" height="780" alt="Checklist dos encontros" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-cartas-conjuge.webp" width="520" height="780" alt="Cartas Pergunte ao seu Cônjuge" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-emoji2.webp" width="520" height="637" alt="Cartas do jogo Emoji Bíblico" decoding="async"></div></div>
+        <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/dn-carta.webp" width="520" height="738" alt="Carta de amor para o cônjuge" decoding="async"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="items two">
+      <div class="item"><i aria-hidden="true"></i>Desafios para Casais</div>
+      <div class="item"><i aria-hidden="true"></i>Bingo Cristão</div>
+      <div class="item"><i aria-hidden="true"></i>Caça ao Tesouro</div>
+      <div class="item"><i aria-hidden="true"></i>Verdade ou Desafio Cristão</div>
+      <div class="item"><i aria-hidden="true"></i>Jogos de Cartas</div>
+      <div class="item"><i aria-hidden="true"></i>Quiz Bíblico</div>
+      <div class="item"><i aria-hidden="true"></i>Cartas “Pergunte ao seu Cônjuge”</div>
+      <div class="item"><i aria-hidden="true"></i>Orações Guiadas</div>
+      <div class="item"><i aria-hidden="true"></i>Devocionais</div>
+      <div class="item"><i aria-hidden="true"></i>Cupons Românticos</div>
+      <div class="item"><i aria-hidden="true"></i>Missões da Semana</div>
+      <div class="item"><i aria-hidden="true"></i>Checklists dos Encontros</div>
+      <div class="item"><i aria-hidden="true"></i>Tribunal Bíblico</div>
+      <div class="item"><i aria-hidden="true"></i>Emoji Bíblico</div>
+      <div class="item"><i aria-hidden="true"></i>Cartas de Amor</div>
+    </div>
+    <p class="closer"><span class="hl">Tudo pronto para viver uma experiência diferente toda semana.</span></p>
+  </div>
+  <!-- CTA fixo aparece a partir daqui: fim da seção anterior, pra o botão
+       já estar na tela quando a pessoa chega em "Em apenas 3 passos".
+       Antes ficava no FIM daquela seção e demorava demais. (22/08) -->
+  <span id="stickyTrigger" aria-hidden="true"></span>
+</section>
+
+<!-- OFERTA V2 ▸ CADA DATE NIGHT POR DENTRO -------------------------------- -->
+<section class="band tilt reveal" id="fichas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow big">Cada Date Night por dentro</span>
+      <h2>Vocês sabem o que vão viver <span class="hl">antes de começar</span></h2>
+      <p class="lead">Toda ficha mostra quanto tempo leva e o clima da noite. Todas custam R$ 0 e são feitas em casa.</p>
+    </div>
+    <div class="jornada">
+      <div><span class="f f1">Fase 1</span><b>Aproximar</b><small>Jogos leves pra rir juntos</small></div>
+      <div><span class="f f2">Fase 2</span><b>Aprofundar</b><small>Conversas que vocês nunca tiveram</small></div>
+      <div><span class="f f3">Fase 3</span><b>Renovar a aliança</b><small>Deus no centro de vocês</small></div>
+    </div>
+    <p class="humor-tit">Como vocês estão hoje?</p>
+    <div class="humor" role="group" aria-label="Filtrar por clima">
+      <button type="button" class="on" data-h="">Todos</button>
+      <button type="button" data-h="cansados">Cansados</button>
+      <button type="button" data-h="rir">Querendo rir</button>
+      <button type="button" data-h="conversar">Precisando conversar</button>
+      <button type="button" data-h="orar">Querendo orar</button>
+    </div>
+    <div class="fichas">
+      <div class="ficha" data-clima="rir">
+        <div class="ft"><img loading="lazy" src="images/dn-bingocristao.webp" width="520" height="736" alt="Bingo Cristão da Gratidão" decoding="async"></div>
+        <div class="fb">
+          <span class="f f1">Fase 1 · Aproximar</span>
+          <h3>Bingo Cristão da Gratidão</h3>
+          <div class="chips"><span>⏱ 30 min</span><span>R$ 0</span><span>🏠 Em casa</span></div>
+          <span class="fim">Termina com uma oração de gratidão</span>
+        </div>
+      </div>
+      <div class="ficha" data-clima="rir">
+        <div class="ft"><img loading="lazy" src="images/dn-quizbiblico.webp" width="520" height="736" alt="Quiz Bíblico a Dois" decoding="async"></div>
+        <div class="fb">
+          <span class="f f1">Fase 1 · Aproximar</span>
+          <h3>Quiz Bíblico a Dois</h3>
+          <div class="chips"><span>⏱ 25 min</span><span>R$ 0</span><span>🏠 Em casa</span></div>
+          <span class="fim">Quem perder escolhe o louvor</span>
+        </div>
+      </div>
+      <div class="ficha" data-clima="rir cansados">
+        <div class="ft"><img loading="lazy" src="images/dn-emoji1.webp" width="520" height="736" alt="Emoji Bíblico" decoding="async"></div>
+        <div class="fb">
+          <span class="f f1">Fase 1 · Aproximar</span>
+          <h3>Emoji Bíblico</h3>
+          <div class="chips"><span>⏱ 20 min</span><span>R$ 0</span><span>🏠 Em casa</span></div>
+          <span class="fim">Termina com um versículo</span>
+        </div>
+      </div>
+      <div class="ficha" data-clima="conversar">
+        <div class="ft"><img loading="lazy" src="images/dn-as5linguagensdoamor.webp" width="520" height="736" alt="Jogo das 5 Linguagens do Amor" decoding="async"></div>
+        <div class="fb">
+          <span class="f f2">Fase 2 · Aprofundar</span>
+          <h3>Jogo das 5 Linguagens do Amor</h3>
+          <div class="chips"><span>⏱ 40 min</span><span>R$ 0</span><span>🏠 Em casa</span></div>
+          <span class="fim">Termina com um combinado da semana</span>
+        </div>
+      </div>
+      <div class="ficha" data-clima="conversar">
+        <div class="ft"><img loading="lazy" src="images/dn-4temperamentos.webp" width="520" height="736" alt="Teste dos 4 Temperamentos" decoding="async"></div>
+        <div class="fb">
+          <span class="f f2">Fase 2 · Aprofundar</span>
+          <h3>Teste dos 4 Temperamentos</h3>
+          <div class="chips"><span>⏱ 35 min</span><span>R$ 0</span><span>🏠 Em casa</span></div>
+          <span class="fim">Termina com uma oração um pelo outro</span>
+        </div>
+      </div>
+      <div class="ficha" data-clima="orar cansados">
+        <div class="ft"><img loading="lazy" src="images/dn-oracaoguiada.webp" width="520" height="736" alt="Oração Guiada a Dois" decoding="async"></div>
+        <div class="fb">
+          <span class="f f3">Fase 3 · Renovar a aliança</span>
+          <h3>Oração Guiada a Dois</h3>
+          <div class="chips"><span>⏱ 20 min</span><span>R$ 0</span><span>🏠 Em casa</span></div>
+          <span class="fim">Termina com a bênção do casal</span>
+        </div>
+      </div>
+    </div>
+    <p class="fichas-nota">Na área de membros, os 107 encontros estão organizados assim.<br>Vocês escolhem <b>pelo momento</b>, não pelo nome.</p>
+  </div>
+</section>
+<script>
+(function(){var g=document.querySelector('#fichas .humor');if(!g)return;
+g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+[].forEach.call(g.children,function(x){x.classList.toggle('on',x===b)});var h=b.getAttribute('data-h');
+[].forEach.call(document.querySelectorAll('#fichas .ficha'),function(c){
+c.classList.toggle('off',!!h&&(' '+c.getAttribute('data-clima')+' ').indexOf(' '+h+' ')<0)});});})();
+</script>
+
+<!-- SESSÃO 04 ▸ COMO FUNCIONA (v2: 5 passos + Passaporte) ----------------- -->
+<section class="sec reveal">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Em <span class="hl">5 passos</span> simples</h2>
+      <p class="lead">Do celular ao "amém" em uma noite.</p>
+    </div>
+    <ol class="passos5">
+      <li><span><b>Entrem com o e-mail da compra</b>Tudo no celular, sem senha.</span></li>
+      <li><span><b>Escolham pelo momento</b>O tempo e o clima já estão na ficha.</span></li>
+      <li><span><b>Imprimam ou abram no celular</b>Custo zero, tudo em casa.</span></li>
+      <li><span><b>Vivam o encontro</b>Jogo, conversa e uma oração curta pra fechar.</span></li>
+      <li><span><b>Marquem no Passaporte</b>Ganham o selo e nunca repetem sem querer.</span></li>
+    </ol>
+    <div class="passaporte">
+      <div class="pt"><b>Passaporte do Casal</b><small>12 de 107 ♥</small></div>
+      <div class="selos"><i class="ok">♥</i><i class="ok">♥</i><i class="ok">♥</i><i class="ok">♥</i><i class="ok">♥</i><i class="ok">♥</i><i class="ok">♥</i><i class="ok">♥</i><i class="ok">♥</i><i class="ok">♥</i><i class="ok">♥</i><i class="ok">♥</i><i>13</i><i>14</i><i>15</i><i>16</i><i>17</i><i>18</i><i>19</i><i>20</i><i>21</i></div>
+      <p>Cada encontro vivido ganha um selo. Vocês veem o quanto já caminharam e, quando completam todos, recebem o certificado do casal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SESSÃO 05 ▸ CLIENTES SATISFEITOS ------------------------------------- -->
+<section class="sec reveal" id="prova">
+  <div class="wrap sec-head">
+    <span class="eyebrow big">Clientes satisfeitos</span>
+    <h2>Mais casais criando memórias <span class="hl">que ficarão para sempre</span></h2>
+  </div>
+  <div class="caro" data-caro="" data-dir="1" data-nopause="">
+    <div class="caro-viewport">
+      <div class="caro-track">
+        <div class="wa"><img loading="lazy" src="images/d1.webp" width="480" height="841" alt="Depoimento de cliente no WhatsApp" decoding="async"></div>
+        <div class="wa"><img loading="lazy" src="images/d2.webp" width="480" height="847" alt="Depoimento de cliente no WhatsApp" decoding="async"></div>
+        <div class="wa"><img loading="lazy" src="images/d3.webp" width="480" height="842" alt="Depoimento de cliente no WhatsApp" decoding="async"></div>
+        <div class="wa"><img loading="lazy" src="images/d4.webp" width="480" height="846" alt="Depoimento de cliente no WhatsApp" decoding="async"></div>
+        <div class="wa"><img loading="lazy" src="images/d5.webp" width="480" height="843" alt="Depoimento de cliente no WhatsApp" decoding="async"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- OFERTA V2 ▸ CASE REAL: Isabel e José (foto e texto enviados por ele, 27/10) -->
+<section class="sec reveal">
+  <div class="wrap">
+    <div class="case">
+      <img loading="lazy" class="case-foto" src="images/case-isabel-jose.webp" width="600" height="600" alt="Isabel e José" decoding="async">
+      <div class="cb">
+        <h3>“A gente só conversava sobre contas e boletos”</h3>
+        <p>Oi, eu sou a Isabel 🤍 Eu e o José somos casados há 4 anos. A gente se amava, mas a semana engolia tudo, e o culto em casa nunca acontecia.</p>
+        <p style="margin-top:8px">Começamos numa terça, com o Quiz Bíblico a Dois. O José, que dizia não ser de dinâmica, perdeu por dois pontos e pediu revanche na hora. Rimos como no namoro e terminamos orando de mãos dadas no sofá.</p>
+        <p style="margin-top:8px">Hoje temos 14 selos do Date Night, e a terça virou a nossa noite favorita.</p>
+        <p class="ass">Isabel e José · casados há 4 anos</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SESSÃO 06 ▸ BÔNUS ---------------------------------------------------- -->
+<section class="band tilt reveal">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow big">Apenas hoje, <span data-today="date">hoje</span></span>
+      <h2>Hoje você também recebe <span class="hl">gratuitamente</span></h2>
+    </div>
+
+    <div class="bonus">
+      <!-- BÔNUS 01 (10/11) — 8 Noites Até o Natal, edição especial feita pela noiva dele.
+           Carrossel das páginas no lugar da capa. -->
+      <div class="bonus-item bonus-caro">
+        <div class="caro" data-caro="" data-dir="1" data-speed="30" data-nopause="" aria-hidden="true">
+          <div class="caro-viewport">
+            <div class="caro-track">
+            <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/natal8-capa.webp" width="440" height="622" alt="8 Noites Até o Natal: capa da edição especial de Natal" decoding="async"></div></div>
+            <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/natal8-noite1.webp" width="440" height="622" alt="Noite 1: Nosso Cantinho de Natal" decoding="async"></div></div>
+            <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/natal8-noite2.webp" width="440" height="622" alt="Noite 2: Uma Noite em Belém" decoding="async"></div></div>
+            <div class="aslide"><div class="aslide-btn"><img loading="lazy" src="images/natal8-quiz.webp" width="440" height="622" alt="Quiz Natalino: o nascimento de Jesus" decoding="async"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="bonus-body">
+          <span class="tag">Bônus 01</span><span class="prazo">Só hoje</span>
+          <h3>8 Noites Até o Natal</h3>
+          <p>Edição especial de Natal: 8 encontros prontos pra celebrar Jesus a dois, com guias, atividades, filmes e o Quiz Natalino de 42 perguntas.</p>
+          <span class="price-old">Valor: R$ 47</span> · <span class="price-free">Grátis</span>
+        </div>
+      </div>
+      <!-- BÔNUS 02 (17/09) — Plano de Leitura da Bíblia a Dois.
+           Entrou por dado: 33,3% dos 562 respondentes do formulário de onboarding
+           pediram "plano de leitura da Bíblia pra fazer a dois" — 2ª maior demanda
+           da base. Capa gerada no padrão das outras três.
+           O arquivo NÃO segue a numeração bonus1/2/3 de proposito: renomear os
+           outros quebraria as copias em es/ e pt-br/. Nome por conteudo. -->
+      <div class="bonus-item">
+        <img loading="lazy" src="images/bonus-plano-leitura.webp" width="760" height="760" alt="Plano de Leitura da Bíblia a Dois" decoding="async">
+        <div class="bonus-body">
+          <span class="tag">Bônus 02</span>
+          <h3>Plano de Leitura da Bíblia a Dois</h3>
+          <p>90 dias para lerem juntos, 10 minutos por dia.</p>
+          <span class="price-old">Valor: R$ 97</span> · <span class="price-free">Grátis</span>
+        </div>
+      </div>
+      <div class="bonus-item">
+        <img loading="lazy" src="images/bonus1-30devocionais.webp" width="760" height="760" alt="+30 Devocionais Cristãos para Casais" decoding="async">
+        <div class="bonus-body">
+          <span class="tag">Bônus 03</span>
+          <h3>+30 Devocionais Cristãos para Casais</h3>
+          <span class="price-old">Valor: R$ 47</span> · <span class="price-free">Grátis</span>
+        </div>
+      </div>
+      <div class="bonus-item">
+        <img loading="lazy" src="images/bonus2-louvores.webp" width="760" height="760" alt="Playlist de Louvores para Cada Date Night" decoding="async">
+        <div class="bonus-body">
+          <span class="tag">Bônus 04</span>
+          <h3>Playlist de Louvores para Cada Date Night</h3>
+          <span class="price-old">Valor: R$ 27</span> · <span class="price-free">Grátis</span>
+        </div>
+      </div>
+      <div class="bonus-item">
+        <img loading="lazy" src="images/bonus3-datenightamigos.webp" width="760" height="760" alt="Date Nights Entre Amigos Cristãos" decoding="async">
+        <div class="bonus-body">
+          <span class="tag">Bônus 05</span>
+          <h3>Date Nights Entre Amigos Cristãos</h3>
+          <p>30 experiências prontas para células, casais amigos e pequenos grupos.</p>
+          <span class="price-old">Valor: R$ 67</span> · <span class="price-free">Grátis</span>
+        </div>
+      </div>
+      <div class="bonus-item">
+        <img loading="lazy" src="images/bonus5-natal-a-dois.webp" width="760" height="760" alt="Natal a Dois com Cristo" decoding="async">
+        <div class="bonus-body">
+          <span class="tag">Bônus 06</span><span class="prazo">Só até 25/12</span>
+          <h3>Natal a Dois com Cristo</h3>
+          <p>Este ano, Cristo no centro do Natal de vocês, e não só na decoração. 24 noites de Advento, o jogo "Quem Disse no Natal?", a Ceia a Dois e 10 filmes pra assistir juntos.</p>
+          <span class="price-old">Valor: R$ 47</span> · <span class="price-free">Grátis</span>
+        </div>
+      </div>
+      <div class="bonus-item">
+        <img loading="lazy" src="images/bonus6-o-convite.webp" width="760" height="760" alt="O Convite: sem parecer cobrança" decoding="async">
+        <div class="bonus-body">
+          <span class="tag">Bônus 07</span>
+          <h3>O Convite</h3>
+          <p>Você quer, mas tem medo dele achar bobo? 15 jeitos prontos de chamar seu marido, sem parecer cobrança.</p>
+          <span class="price-old">Valor: R$ 37</span> · <span class="price-free">Grátis</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bonus-total">
+      Total em bônus
+      <b>R$ 369</b>
+      <small>Hoje totalmente <strong>GRÁTIS</strong> no Plano Aliança</small>
+    </div>
+  </div>
+</section>
+
+<!-- SESSÃO 07 ▸ PLANOS --------------------------------------------------- -->
+<section class="sec" id="planos">
+  <div class="wrap">
+    <div class="plan-intro reveal">
+      <span class="eyebrow big">Escolha seu plano</span>
+      <h2 style="margin:12px 0 8px">Comecem hoje a criar <span class="hl">momentos inesquecíveis</span> juntos</h2>
+    </div>
+
+    <div class="plans">
+      <div class="plan">
+        <h3>Plano Básico</h3>
+        <ul>
+          <li>25 Date Nights Cristão</li>
+        </ul>
+        <div class="price">
+          <s>De R$ 97</s>
+          <em>Por apenas</em>
+          <b><sup>R$</sup>19,90</b>
+        </div>
+        <!-- Abre o popup de upsell. NÃO aponta para a Payt de propósito: um <a>
+             para o checkout é interceptado pelo script da UTMify, que navega
+             sozinho e atropela o popup. Quem leva ao checkout do Básico é o
+             link "Não, quero seguir..." dentro do popup — esse é um <a> real. -->
+        <button class="btn ghost" type="button" data-upsell-open="" data-cta="plano-basico">Quero o Plano Básico</button>
+      </div>
+
+      <div class="plan top" id="planoAlianca">
+        <span class="plan-tag">⭐ Mais escolhido</span>
+        <h3>Plano Aliança</h3>
+        <img loading="lazy" class="plan-shot" src="images/mockup2.webp" width="700" height="700" alt="Tudo que vem no Plano Aliança" decoding="async">
+        <span class="plan-scarcity">⏳ Bônus inclusos somente hoje, <span data-today="full">hoje</span></span>
+        <div class="price">
+          <s>De R$ 197</s>
+          <em>Por apenas</em>
+          <b><sup>R$</sup>39,90</b>
+        </div>
+        <a class="btn pulse" href="https://checkout.payt.com.br/396e86e88d3315f2dd9b99cf38d0942c?payment=pix" data-checkout="completo" data-cta="plano-alianca">Quero Plano Aliança</a>
+        <p class="incluso-tit">107 Date Nights</p>
+        <ul class="incluso">
+          <li>107 Date Nights prontos</li>
+          <li>Bingos para casais cristãos</li>
+          <li>Jogos de cartas</li>
+          <li>Quiz Bíblico</li>
+          <li>Verdade ou Desafio Cristão</li>
+          <li>Roleta de desafios</li>
+          <li>Desafios em casal</li>
+          <li>Dinâmicas de conexão</li>
+          <li>Devocionais</li>
+          <li>Orações guiadas</li>
+          <li>Cartas “Pergunte ao seu cônjuge”</li>
+          <li>Cupons românticos</li>
+          <li>Missões da semana</li>
+          <li>Checklists dos encontros</li>
+          <li>Fichas com o tempo e o clima de cada encontro</li>
+          <li>Passaporte do Casal</li>
+          <li>Acesso vitalício</li>
+          <li>Suporte exclusivo</li>
+        </ul>
+        <ul class="incluso bonus-list">
+          <li><span class="bx">#bônus</span> 8 Noites Até o Natal <s>R$ 47</s></li>
+          <li><span class="bx">#bônus</span> Plano de Leitura da Bíblia a Dois <s>R$ 97</s></li>
+          <li><span class="bx">#bônus</span> +30 Devocionais Cristãos para Casais <s>R$ 47</s></li>
+          <li><span class="bx">#bônus</span> Playlist de Louvores para Cada Date Night <s>R$ 27</s></li>
+          <li><span class="bx">#bônus</span> Date Nights Entre Amigos Cristãos <s>R$ 67</s></li>
+          <li><span class="bx">#bônus</span> Natal a Dois com Cristo <s>R$ 47</s></li>
+          <li><span class="bx">#bônus</span> O Convite <s>R$ 37</s></li>
+        </ul>
+        <p class="wapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35z"></path><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.27-1.38a9.9 9.9 0 0 0 4.77 1.22h.01c5.46 0 9.9-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2zm0 18.14h-.01c-1.5 0-2.97-.4-4.25-1.16l-.31-.18-3.13.82.83-3.05-.2-.31a8.22 8.22 0 0 1-1.26-4.35c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.22-8.14 8.22z"></path></svg>Acesso imediato no WhatsApp</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SESSÃO 08 ▸ GARANTIA ------------------------------------------------- -->
+<section class="band tilt reveal">
+  <div class="wrap">
+    <div class="guar">
+      <img loading="lazy" class="seal" src="images/garantia-30d.webp" width="440" height="440" alt="Selo de garantia incondicional de 30 dias" decoding="async">
+      <h2>Garantia incondicional de 30 dias</h2>
+      <p class="lead">Vivam os Date Nights durante 30 dias. Se por qualquer motivo vocês sentirem que o material não ajudou a criar momentos mais especiais no relacionamento, devolvemos 100% do seu dinheiro.</p>
+      <p class="lead"><strong>Sem perguntas. Sem burocracia. O risco é todo nosso.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- SESSÃO 08.5 ▸ AUTORIDADE (Ana Cristina) — REMOVIDA da LP BR em 19/08.
+     Ficava aqui, entre a garantia e o FAQ. O bloco inteiro está guardado em
+     _backup/secao-autoridade-2026-08-19.html (não sobe pro servidor) — pra
+     trazer de volta, é só colar o conteúdo de lá neste ponto.
+     O CSS .autor* foi mantido no <style> inline de propósito, senão a volta dá
+     trabalho. A seção continua no ar nas outras LPs. -->
+
+<!-- SESSÃO 09 ▸ FAQ ------------------------------------------------------ -->
+<section class="sec reveal">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow big">Dúvidas</span>
+      <h2>Perguntas <span class="hl">frequentes</span></h2>
+    </div>
+    <div class="faq">
+      <details><summary>Meu marido não gosta dessas dinâmicas. Vai funcionar?</summary><p>Comecem pela Fase 1: são jogos de 15 a 30 minutos, com competição e risada, não parece terapia. E o bônus O Convite traz 15 jeitos de chamar sem parecer cobrança.</p></details>
+      <details><summary>A gente não tem tempo nem pra respirar.</summary><p>Toda ficha mostra o tempo antes de começar, e tem encontro de 20 minutos. Um por semana já muda o clima da casa.</p></details>
+      <details><summary>Não vai virar mais uma coisa que a gente começa e larga?</summary><p>A próxima ficha já está escolhida e o Passaporte mostra o quanto vocês já caminharam. Ninguém quer quebrar a sequência.</p></details>
+      <details><summary>Jogo combina com fé?</summary><p>Combina quando leva pra Palavra. Os jogos usam a Bíblia, e todo encontro termina com oração ou devocional.</p></details>
+      <details><summary>Estamos passando por uma crise. Isso resolve?</summary><p>O Date Nights cria tempo bom e conversa, e isso ajuda muito. Mas não substitui aconselhamento: se a crise é séria, procurem também o pastor de vocês.</p></details>
+      <details><summary>Não vai ficar repetitivo?</summary><p>São 107 encontros em 3 fases, mais de 2 anos com um por semana. O Passaporte evita repetir sem querer.</p></details>
+      <details><summary>Vamos ter que gastar ou sair de casa?</summary><p>Não. Todos os encontros custam R$ 0 e são feitos em casa: é só imprimir ou abrir no celular.</p></details>
+      <details><summary>E se a gente não gostar?</summary><p>Vocês têm 30 dias. Se não gostarem, devolvemos 100%, sem perguntas.</p></details>
+      <details><summary>Como recebo e onde uso?</summary><p>No e-mail e no WhatsApp, logo depois do pagamento. Funciona no celular, sem imprimir nada.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL ------------------------------------------------------------ -->
+<section class="final">
+  <div class="wrap">
+    <h2>A próxima noite de vocês já está pronta</h2>
+    <p>107 Date Nights e os 7 bônus — liberados somente hoje.</p>
+    <a class="btn big pulse" href="#planos" data-cta="final">Quero meus Date Nights</a>
+  </div>
+</section>
+
+</main>
+
+<!-- RODAPÉ --------------------------------------------------------------- -->
+<footer>
+  <div class="wrap">
+    <b>Date Nights Cristão</b>
+    © <span id="year">2026</span> — Todos os direitos reservados.
+  </div>
+</footer>
+
+<!-- CTA FIXO ------------------------------------------------------------- -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <div class="inner"><a class="btn" href="#planos" id="stickyLink" tabindex="-1" data-cta="sticky">Quero meus Date Nights</a></div>
+</div>
+
+<!-- MODAL DE UPSELL ------------------------------------------------------ -->
+<div class="modal" id="upsell" role="dialog" aria-modal="true" aria-labelledby="upsellTitle">
+  <div class="modal-box">
+    <button class="modal-close" data-close="" aria-label="Fechar">×</button>
+    <span class="eyebrow">Antes de continuar</span>
+    <h2 id="upsellTitle" style="margin:12px 0 6px;font-size:25px">Por só <span class="hl">R$ 10,00 a mais</span></h2>
+    <p class="lead" style="font-size:15px">Compare o que entra em cada um antes de decidir:</p>
+
+    <!-- comparativo: mostra o que a pessoa leva em cada plano -->
+    <div class="comp">
+      <div class="comp-col">
+        <span class="comp-tag">Plano Básico</span>
+        <span class="comp-preco">R$ 19,90</span>
+        <ul>
+          <li>25 Date Nights</li>
+          <li class="nao">107 Date Nights</li>
+          <li class="nao">8 Noites Até o Natal</li>
+          <li class="nao">Plano de Leitura da Bíblia</li>
+          <li class="nao">+30 Devocionais</li>
+          <li class="nao">Playlist de Louvores</li>
+          <li class="nao">Date Nights Entre Amigos</li>
+          <li class="nao">Natal a Dois com Cristo</li>
+          <li class="nao">O Convite</li>
+          <li class="nao">Atualizações gratuitas</li>
+        </ul>
+      </div>
+      <div class="comp-col win">
+        <span class="comp-tag">Plano Aliança</span>
+        <span class="comp-preco">R$ 29,90</span>
+        <ul>
+          <li>25 Date Nights</li>
+          <li>107 Date Nights</li>
+          <li>8 Noites Até o Natal</li>
+          <li>Plano de Leitura da Bíblia</li>
+          <li>+30 Devocionais</li>
+          <li>Playlist de Louvores</li>
+          <li>Date Nights Entre Amigos</li>
+          <li>Natal a Dois com Cristo</li>
+          <li>O Convite</li>
+          <li>Atualizações gratuitas</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="comp-nota">Os 7 bônus sozinhos valem <strong>R$ 369</strong>.</p>
+
+    <a class="btn pulse" href="https://checkout.payt.com.br/cec0974cf89949d91612dc583619e606?payment=pix" data-checkout="upsell" data-cta="upsell-aceita">Quero o Plano Aliança</a>
+    <a class="modal-skip" href="https://checkout.payt.com.br/11523b583c31d9f02e7b3d357fd0201a?payment=pix" data-checkout="basico" data-cta="upsell-recusa">Não, quero seguir com o Plano Básico</a>
+  </div>
+</div>
+
+<!-- LIGHTBOX ------------------------------------------------------------- -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada">
+  <button class="lb-btn lb-close" data-lb-close="" aria-label="Fechar">✕</button>
+  <button class="lb-btn lb-prev" data-lb-prev="" aria-label="Anterior"></button>
+  <img id="lbImg" alt="">
+  <button class="lb-btn lb-next" data-lb-next="" aria-label="Próximo"></button>
+</div>
+
+<!-- Reveal: marca já como .in tudo que estiver na tela agora, antes do script.js
+     (que é defer) rodar. Evita o pisca na primeira dobra e serve de rede pro
+     caso conhecido do IntersectionObserver não disparar num scroll muito rápido. -->
+<script>(function(){try{var h=innerHeight;[].slice.call(document.querySelectorAll('.reveal')).forEach(function(e){var r=e.getBoundingClientRect();if(r.top<h*0.98)e.classList.add('in');});}catch(_){}})();</script>
+
+<!-- ?v= força o navegador a baixar a versão nova; incrementar a cada deploy que mexer no JS -->
+<script src="js/script.js" defer=""></script>
+
+<!-- BACKREDIRECT — ativar quando o cliente enviar a URL da página de back -->
+<script>
+(function(){
+  var BACK_URL = ''; /* ex.: 'https://SEU-BACKREDIRECT.com.br' */
+
+  /* rolagem de âncora SEM mexer no histórico (evita disparar o back nos CTAs) */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if(!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var el = id && document.getElementById(id);
+    if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+  });
+
+  if(!BACK_URL) return;
+  function withUTMs(url){
+    var qs = location.search.replace(/^\?/,'');
+    if(!qs) return url;
+    return url.trim() + (url.indexOf('?')>-1 ? '&' : '?') + qs;
+  }
+  var target = withUTMs(BACK_URL);
+  history.pushState({br:1},'',location.href);
+  history.pushState({br:1},'',location.href);
+  window.addEventListener('popstate', function(){
+    history.pushState({br:1},'',location.href);
+    setTimeout(function(){ location.href = target; }, 1);
+  });
+})();
+</script>
+
+
+
+</body></html>
