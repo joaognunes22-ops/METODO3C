@@ -278,29 +278,4 @@
     try{ if(typeof window.clarity === 'function') window.clarity('event', 'cta_' + nome.replace(/-/g,'_')); }catch(_){}
   });
 
-  /* ---------- 8. Anticópia ----------
-     Barreira contra cópia casual da página. NÃO é segurança de verdade:
-     quem sabe usar o navegador contorna em segundos (o HTML sempre chega
-     no cliente). Serve só para atrapalhar quem copia no automático.
-     Nada aqui toca nos scripts de rastreamento.                            */
-
-  /* botão direito */
-  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
-
-  /* arrastar imagens para fora */
-  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
-
-  /* copiar texto */
-  document.addEventListener('copy', function(e){ e.preventDefault(); });
-  document.addEventListener('cut', function(e){ e.preventDefault(); });
-
-  /* atalhos de ver-código / salvar / devtools / imprimir */
-  document.addEventListener('keydown', function(e){
-    var k = (e.key || '').toLowerCase();
-    var mod = e.ctrlKey || e.metaKey;
-    if(k === 'f12') return e.preventDefault();
-    if(mod && !e.shiftKey && ['u','s','p'].indexOf(k) > -1) return e.preventDefault();
-    if(mod && e.shiftKey && ['i','j','c'].indexOf(k) > -1) return e.preventDefault();
-  });
-
 })();
