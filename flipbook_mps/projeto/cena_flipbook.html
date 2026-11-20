@@ -1,0 +1,255 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#efe6d6;overflow:hidden}canvas{display:block}</style></head>
+<body>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+const W = 1080, H = 1920;
+// ---------------- livro ----------------
+const FIRST = 28, LAST = 590;               // páginas do Kit Completo: Biblioteca (capa 28) + Bônus 1–5
+const NPAGES = LAST - FIRST + 1;            // 563
+const NLEAF = Math.ceil(NPAGES / 2);        // 282 folhas
+const HI = new Set([28,29,30,31,32,95,96,159,160,223,224,287,288,349,350,413,414,475,476,551,552,557,558,573,574,579,580,581,582,589,590]);
+const PW = 0.707, PH = 1.0;                 // A4
+const T_TOTAL = 0.032;                      // espessura do bloco de páginas
+const LEAF_T = T_TOTAL / NLEAF;
+const pad = n => String(n).padStart(3,'0');
+const pageURL = p => (p > LAST) ? null : (HI.has(p) ? `hi/p-${pad(p)}.jpg` : `lo/p-${pad(p)}.jpg`);
+const leafPages = k => [FIRST + 2*k, FIRST + 2*k + 1];   // [frente (direita), verso (esquerda)]
+// spread k = folhas 0..k-1 viradas: esquerda = verso da folha k-1, direita = frente da folha k
+
+// ---------------- coreografia (s) ----------------
+// segmentos de virada: [t0, t1, folhaDe, folhaAte(exclusivo)]
+const SEG = [
+  [1.45, 2.65, 0, 1],      // abre a capa → Como usar | Sumário
+  [4.35, 5.25, 1, 2],      // → Trilha Olhar Atento | OA-001
+  [6.55, 7.95, 2, 34],     // → Lembrar
+  [8.55, 9.65, 34, 66],    // → Pensar
+  [10.15, 11.15, 66, 98],  // → Mãos em Ação
+  [12.05, 12.90, 98, 130], // → Palavras
+  [13.35, 14.20, 130, 161],// → Passo a Passo
+  [14.65, 15.45, 161, 193],// → Sentir
+  [15.95, 16.75, 193, 224],// → Brincar e Criar
+  [17.45, 18.65, 224, 262],// → índice completo → Bônus 1
+  [19.35, 19.85, 262, 265],// → Bônus 2
+  [20.45, 21.15, 265, 273],// → Bônus 3
+  [21.65, 22.15, 273, 276],// → Bônus 4
+  [22.55, 23.05, 276, 277],// → Bônus 5
+  [23.55, 24.45, 277, 281],// → últimas páginas (589 | 590)
+];
+const CLOSE0 = 25.15, CLOSE1 = 26.35;       // fecha o livro → capa
+const DURATION = 27.0;
+const flipStart = new Float64Array(NLEAF).fill(1e9), flipDur = new Float64Array(NLEAF).fill(1);
+const smooth = u => u<=0?0:u>=1?1:u*u*(3-2*u);
+for (const [t0,t1,a,b] of SEG) {
+  const n = b - a;
+  // duração de cada folha: lenta quando há poucas folhas, rápida no folhear acelerado
+  const d = n === 1 ? (t1 - t0) : Math.max(0.36, Math.min(0.75, (t1 - t0) * 0.45));
+  for (let i = 0; i < n; i++) {
+    // distribuição acelerando e desacelerando (mais folhas no meio)
+    const u = n === 1 ? 0 : i / (n - 1);
+    const w = 0.5 - 0.5*Math.cos(Math.PI*u);
+    const us = 0.55*u + 0.45*w;
+    flipStart[a+i] = t0 + us * (t1 - t0 - d);
+    flipDur[a+i] = d;
+  }
+}
+const easeFlip = u => { u = Math.min(Math.max(u,0),1); return u<0.5 ? 4*u*u*u : 1-Math.pow(-2*u+2,3)/2; };
+function theta(k, t) { return Math.PI * easeFlip((t - flipStart[k]) / flipDur[k]); }
+
+// ---------------- render ----------------
+const renderer = new THREE.WebGLRenderer({antialias:true, preserveDrawingBuffer:true});
+renderer.setSize(W, H, false); renderer.setPixelRatio(1);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.NoToneMapping;
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xefe6d6);
+const camera = new THREE.PerspectiveCamera(30, W/H, 0.05, 50);
+
+// luz suave de estúdio
+scene.add(new THREE.HemisphereLight(0xffffff, 0xeee9e2, 1.9));
+const key = new THREE.DirectionalLight(0xfffdfa, 1.35);
+key.position.set(-1.6, 3.4, -0.9); key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048); key.shadow.radius = 6; key.shadow.bias = -0.0004; key.shadow.normalBias = 0.002;
+Object.assign(key.shadow.camera, {left:-1.2,right:1.2,top:1.2,bottom:-1.2,near:0.5,far:8}); scene.add(key);
+
+// mesa (fundo creme) com leve degradê
+const bgC = document.createElement('canvas'); bgC.width = bgC.height = 512;
+{ const g = bgC.getContext('2d'); const gr = g.createRadialGradient(256,230,40,256,256,360);
+  gr.addColorStop(0,'#f6efe3'); gr.addColorStop(1,'#e6dac6'); g.fillStyle = gr; g.fillRect(0,0,512,512); }
+const bgTex = new THREE.CanvasTexture(bgC); bgTex.colorSpace = THREE.SRGBColorSpace;
+const table = new THREE.Mesh(new THREE.PlaneGeometry(9, 9), new THREE.MeshStandardMaterial({map:bgTex, roughness:1}));
+table.rotation.x = -Math.PI/2; table.position.y = -0.0005; table.receiveShadow = true; scene.add(table);
+
+// texturas
+const loader = new THREE.TextureLoader(); const texCache = new Map();
+const maxAniso = renderer.capabilities.getMaxAnisotropy();
+const blankTex = (() => { const c = document.createElement('canvas'); c.width = c.height = 4; const g = c.getContext('2d'); g.fillStyle = '#fbfaf7'; g.fillRect(0,0,4,4); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
+function getTex(p) {
+  const url = pageURL(p); if (!url) return Promise.resolve(blankTex);
+  if (!texCache.has(p)) texCache.set(p, new Promise(res => loader.load(url, t => {
+    t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = maxAniso; t.generateMipmaps = true;
+    t.minFilter = THREE.LinearMipmapLinearFilter; res(t); })));
+  return texCache.get(p);
+}
+
+// borda das páginas (listras finas)
+const edgeC = document.createElement('canvas'); edgeC.width = 8; edgeC.height = 256;
+{ const g = edgeC.getContext('2d'); for (let y = 0; y < 256; y++) { const v = 236 + ((y*37)%11) - 5; g.fillStyle = `rgb(${v},${v-3},${v-10})`; g.fillRect(0,y,8,1); } }
+const edgeTex = new THREE.CanvasTexture(edgeC); edgeTex.colorSpace = THREE.SRGBColorSpace;
+edgeTex.wrapS = edgeTex.wrapT = THREE.RepeatWrapping; edgeTex.repeat.set(1, 6);
+const edgeMat = new THREE.MeshStandardMaterial({map:edgeTex, roughness:0.95});
+const topMat = new THREE.MeshStandardMaterial({color:0xf7f4ee, roughness:0.95});
+function stackMesh() { const m = new THREE.Mesh(new THREE.BoxGeometry(1,1,1), [edgeMat,edgeMat,topMat,topMat,edgeMat,edgeMat]); m.castShadow = true; m.receiveShadow = true; scene.add(m); return m; }
+const stackR = stackMesh(), stackL = stackMesh();
+
+// geometria de folha curva
+const NS = 56, NV = 10;
+function makeLeaf() {
+  const pos = new THREE.BufferAttribute(new Float32Array((NS+1)*(NV+1)*3), 3);
+  const uvF = new Float32Array((NS+1)*(NV+1)*2), uvB = new Float32Array((NS+1)*(NV+1)*2), idx = [];
+  for (let j = 0; j <= NV; j++) for (let i = 0; i <= NS; i++) {
+    const n = j*(NS+1)+i; uvF[2*n] = i/NS; uvF[2*n+1] = 1 - j/NV; uvB[2*n] = 1 - i/NS; uvB[2*n+1] = 1 - j/NV; }
+  for (let j = 0; j < NV; j++) for (let i = 0; i < NS; i++) {
+    const a = j*(NS+1)+i, b = a+1, c = a+NS+1, d = c+1; idx.push(a,c,b, b,c,d); }
+  const gF = new THREE.BufferGeometry(); gF.setAttribute('position', pos); gF.setAttribute('uv', new THREE.BufferAttribute(uvF,2)); gF.setIndex(idx);
+  const gB = new THREE.BufferGeometry(); gB.setAttribute('position', pos); gB.setAttribute('uv', new THREE.BufferAttribute(uvB,2)); gB.setIndex(idx);
+  const mF = new THREE.MeshStandardMaterial({roughness:0.92, side:THREE.FrontSide});
+  const mB = new THREE.MeshStandardMaterial({roughness:0.92, side:THREE.BackSide});
+  const f = new THREE.Mesh(gF, mF), b = new THREE.Mesh(gB, mB);
+  for (const m of [f,b]) { m.castShadow = true; m.receiveShadow = true; m.frustumCulled = false; scene.add(m); }
+  return {f, b, pos, gF, gB, k: -1};
+}
+const pool = []; for (let i = 0; i < 40; i++) pool.push(makeLeaf());
+const LAM = 0.05;
+function shapeLeaf(L, th, aR, aL, yPivot, lift) {
+  const p = L.pos.array, ds = 1/NS;
+  for (let j = 0; j <= NV; j++) {
+    const v = j/NV; let x = 0, y = yPivot;
+    for (let i = 0; i <= NS; i++) {
+      const s = i/NS, n = j*(NS+1)+i;
+      if (i > 0) {
+        const sm = (i - 0.5)/NS, e = Math.exp(-sm/LAM);
+        const gut = (1 - th/Math.PI)*aR*e - (th/Math.PI)*aL*e;
+        // curvatura: a borda externa atrasa; o canto inferior conduz levemente
+        const curl = -0.85*Math.sin(th)*Math.pow(sm,1.5)*(1 + 0.45*(v - 0.5));
+        const al = th + gut + curl;
+        x += Math.cos(al)*ds*PW; y += Math.sin(al)*ds*PW;
+      }
+      p[3*n] = x; p[3*n+1] = y + lift*(1-Math.abs(Math.cos(th)))*0; p[3*n+2] = (v - 0.5)*PH;
+    }
+  }
+  L.pos.needsUpdate = true; L.gF.computeVertexNormals(); L.gB.computeVertexNormals();
+}
+function riseOf(a) { let y = 0; for (let i = 1; i <= NS; i++) y += Math.sin(a*Math.exp(-((i-0.5)/NS)/LAM))*PW/NS; return y; }
+function solveA(h) { let lo = 0, hi = 1.45; for (let k = 0; k < 30; k++) { const m = (lo+hi)/2; if (riseOf(m) < h) lo = m; else hi = m; } return lo; }
+// bloco esquerdo que fecha o livro
+const closeGeo = new THREE.BoxGeometry(PW, 1, PH);
+const closeTop = new THREE.MeshStandardMaterial({roughness:0.92}), closeBot = new THREE.MeshStandardMaterial({roughness:0.92});
+const closer = new THREE.Mesh(closeGeo, [edgeMat,edgeMat,closeTop,closeBot,edgeMat,edgeMat]); closer.castShadow = closer.receiveShadow = true;
+const closerPivot = new THREE.Group(); closerPivot.add(closer); scene.add(closerPivot);
+
+// ---------------- câmera ----------------
+// chaves: [t, alvoX, alvoZ, distância, elevação(graus), azimute(graus)]
+const OV = [0, 0.02, 3.35, 58, 0];
+const CAM = [
+  [0.0,  0.345, 0.0, 3.25, 68, -6],
+  [1.3,  0.345, 0.0, 3.80, 64, -3],
+  [2.6,  0.05, 0.02, 5.20, 60, 0],
+  [3.4,  0.345, -0.02, 3.03, 76, 0],     // zoom no sumário
+  [4.2,  0.345, -0.02, 2.90, 77, 0],
+  [5.0,  0.06, 0.02, 5.20, 60, 2],
+  [5.8,  0.345, 0.0, 3.11, 74, 3],      // zoom na atividade OA-001 (3 níveis)
+  [6.5,  0.345, 0.02, 3.03, 75, 2],
+  [7.4,  0.0, 0.02, 5.20, 57, 0],
+  [9.0,  0.0, 0.02, 5.20, 58, -3],
+  [10.5, 0.0, 0.02, 5.20, 59, -2],
+  [11.4, 0.345, 0.0, 3.28, 73, 0],      // zoom em Mãos em Ação
+  [12.0, 0.345, 0.02, 3.22, 73, 0],
+  [12.8, 0.0, 0.02, 5.20, 58, 2],
+  [16.2, 0.0, 0.02, 5.20, 59, 3],
+  [17.1, -0.2, 0.0, 3.56, 66, 2],       // Brincar e Criar
+  [17.6, 0.0, 0.02, 5.20, 58, 0],
+  [18.9, 0.345, 0.0, 3.04, 70, -2],      // Bônus 1
+  [19.4, 0.1, 0.02, 4.19, 63, -2],
+  [20.2, -0.3, 0.0, 3.41, 67, -1],      // Bônus 2
+  [21.3, 0.25, 0.0, 3.56, 66, 0],       // Bônus 3
+  [22.4, -0.15, 0.0, 3.88, 64, 1],      // Bônus 4
+  [23.2, 0.25, 0.0, 3.72, 65, 1],       // Bônus 5
+  [24.0, 0.0, 0.02, 5.20, 59, 0],
+  [24.9, 0.0, 0.02, 5.20, 62, 0],       // últimas páginas
+  [25.7, 0.25, 0.02, 5.20, 61, -2],
+  [27.0, 0.345, 0.0, 3.3, 67, -5],     // capa
+];
+function camAt(t) {
+  let i = 0; while (i < CAM.length - 2 && CAM[i+1][0] <= t) i++;
+  const P = k => CAM[Math.max(0, Math.min(CAM.length-1, k))];
+  const p0 = P(i-1), p1 = P(i), p2 = P(i+1), p3 = P(i+2);
+  const u = Math.min(1, Math.max(0, (t - p1[0]) / (p2[0] - p1[0])));
+  const out = [];
+  for (let c = 1; c < 6; c++) {   // Catmull-Rom (velocidade contínua)
+    const a = p0[c], b = p1[c], cc = p2[c], d = p3[c];
+    out.push(0.5*((2*b) + (-a+cc)*u + (2*a-5*b+4*cc-d)*u*u + (-a+3*b-3*cc+d)*u*u*u));
+  }
+  return out;
+}
+
+// ---------------- quadro ----------------
+window.renderAt = async function(t) {
+  // folhas: quantas já viradas, quais em movimento
+  let nLeft = 0; const flying = [];
+  for (let k = 0; k < NLEAF; k++) { const th = theta(k, t); if (th >= Math.PI - 1e-4) nLeft = k+1; else if (th > 1e-4) flying.push(k); }
+  const closing = t > CLOSE0; const cu = easeFlip((t - CLOSE0)/(CLOSE1 - CLOSE0));
+  const nRight = NLEAF - nLeft - flying.length;
+  const tR = Math.max(nRight - 1, 0)*LEAF_T + 0.0015, tL = Math.max(nLeft - 1, 0)*LEAF_T + (nLeft ? 0.0015 : 0);
+  const aR = solveA(tR + 0.002), aL = solveA(tL + 0.002);
+  const hR = riseOf(aR) - 0.0012, hL = riseOf(aL) - 0.0012;
+  // pilhas
+  const sx = PW*0.78;
+  stackR.visible = nRight > 1; stackR.scale.set(sx, Math.max(hR, 1e-4), PH*0.998); stackR.position.set(PW - sx/2, stackR.scale.y/2, 0);
+  stackL.visible = nLeft > 1 && !closing; stackL.scale.set(sx, Math.max(hL, 1e-4), PH*0.998); stackL.position.set(-(PW - sx/2), stackL.scale.y/2, 0);
+  // folhas visíveis: topo da direita, topo da esquerda, em voo
+  const vis = [];
+  if (nRight > 0) vis.push([nLeft + flying.length, 0]);
+  if (nLeft > 0 && !closing) vis.push([nLeft - 1, Math.PI]);
+  for (const k of flying) vis.push([k, theta(k, t)]);
+  const jobs = [];
+  pool.forEach(L => { L.f.visible = L.b.visible = false; });
+  vis.slice(0, pool.length).forEach(([k, th], i) => {
+    if (k >= NLEAF) return;
+    const L = pool[i]; L.f.visible = L.b.visible = true;
+    const order = (th === 0 || th === Math.PI) ? 0 : 1 + flying.indexOf(k)*0.15;
+    shapeLeaf(L, th, aR, aL, 0.0004*order, 0);
+    const [pf, pb] = leafPages(k);
+    jobs.push(getTex(pf).then(tx => { if (L.f.material.map !== tx) { L.f.material.map = tx; L.f.material.needsUpdate = true; } }));
+    jobs.push(getTex(pb).then(tx => { if (L.b.material.map !== tx) { L.b.material.map = tx; L.b.material.needsUpdate = true; } }));
+  });
+  // fechamento: bloco esquerdo gira sobre a lombada
+  closerPivot.visible = closing;
+  if (closing) {
+    const th = Math.PI * (1 - cu);
+    const thick = Math.max(tL, 0.004);
+    closer.scale.set(1, thick, 1);
+    closer.position.set(PW/2, thick/2, 0);   // no grupo: x de 0 a PW, rotação em z
+    closerPivot.rotation.z = th;             // th=π: deitado à esquerda (face +y do grupo vira para baixo)
+    closerPivot.position.set(0, tR + 0.0015 + (thick*0.0), 0);
+    // em th=π a face local −y (closeBot) fica para cima: verso da última folha virada (589)
+    // em th=0 a face local +y (closeTop) fica para cima: capa (28)
+    jobs.push(getTex(FIRST).then(tx => { closeTop.map = tx; closeTop.needsUpdate = true; }));
+    jobs.push(getTex(leafPages(nLeft - 1)[1]).then(tx => { if (!closeBot.map || closeBot.map.source !== tx.source) { const c = tx.clone(); c.center.set(0.5, 0.5); c.rotation = Math.PI; c.needsUpdate = true; closeBot.map = c; closeBot.needsUpdate = true; } }));
+  }
+  await Promise.all(jobs);
+  // câmera
+  const [tx, tz, dist, el, az] = camAt(t);
+  const e = THREE.MathUtils.degToRad(el), a = THREE.MathUtils.degToRad(az);
+  camera.position.set(tx + dist*Math.cos(e)*Math.sin(a), dist*Math.sin(e), tz + dist*Math.cos(e)*Math.cos(a));
+  camera.lookAt(tx, 0.01, tz); camera.updateProjectionMatrix();
+  renderer.render(scene, camera);
+  // libera texturas que não serão mais usadas
+  for (const [p, pr] of texCache) { const k = Math.floor((p - FIRST)/2); if (k < nLeft - 3 && p !== FIRST && k !== nLeft - 1) { pr.then(tx => tx.dispose()); texCache.delete(p); } }
+  return [nLeft, flying.length];
+};
+window.DURATION = DURATION; window.ready = true;
+</script></body></html>
