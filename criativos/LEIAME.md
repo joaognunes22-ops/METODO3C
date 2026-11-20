@@ -21,3 +21,15 @@ Original de 41,2 s. Pausas encurtadas (7 pausas entre frases de 0,36–0,49 s �
 Não usadas: L2 e L5 (mostram páginas que não existem no PDF).
 
 `projeto_ugc/`: `audio.py` (narração), `words_map.py` (tempos das legendas), `compose.py` (montagem).
+
+---
+
+# MPS_Criativo_01_UGC_Versao_Profissional
+
+Mesma narração, legendas, oferta e CTA; 1080×1920, H.264 + AAC, 30 fps, 35,000 s.
+
+- **Fotos estáticas** (antes: zoom de 7–10 % + deslocamento com aceleração em todas; Ft2 com +29 % e diagonal). Só a capa (Ft1) tem aproximação linear de 100→103 %. Ft2 mostra a página inteira com os 3 níveis visíveis; Ft4 usa um enquadramento fixo que exclui o rosto cortado.
+- **Vídeos sem zoom artificial** (antes alternava −7/+5/−4/+4/+6/−4/+5 %). Hook virou uma tomada contínua do vídeo B (6,28–11,38 s), que termina antes do corte interno do vídeo-fonte (11,4 s).
+- **Transições:** dissolvências curtas nas trocas de locação e de foto (0,20 s em 5,1/10,4; 0,30 s em 12,4→foto e 15,4; 0,25 s entre fotos; 0,30 s para o mockup). Cortes secos só dentro do mesmo vídeo (6,7 e 8,2 s), na troca de frase.
+- **Harmonização leve** de exposição e balanço de branco por cena (ganho ±7 %, 35–40 % em direção à média).
+- Áudio idêntico (md5) ao da versão anterior.

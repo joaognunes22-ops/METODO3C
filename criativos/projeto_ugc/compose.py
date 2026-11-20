@@ -18,24 +18,24 @@ ease = lambda u: 0.5 - 0.5 * math.cos(math.pi * min(max(u, 0), 1))
 
 # ---------------- cenas: (início, fim, fonte, parâmetros) ----------------
 # vídeo: ('vid', arquivo, t_origem, zoom0, zoom1, cx, cy)   foto: ('img', chave, z0, cx0, cy0, z1, cx1, cy1)
-SHOTS = [
-    (0.00, 2.40, ('vid', VB, 7.40, 1.10, 1.02, 0.50, 0.46)),     # HOOK: peneira sobe, bolinha cai
-    (2.40, 5.10, ('vid', VB, 10.00, 1.02, 1.07, 0.52, 0.50)),    # pega as bolas
-    (5.10, 6.70, ('vid', VA, 9.20, 1.06, 1.02, 0.50, 0.50)),     # "separa tudo com carinho" — mãos do adulto
-    (6.70, 8.20, ('vid', VA, 5.60, 1.02, 1.06, 0.50, 0.42)),     # "começa animado" — acenos
-    (8.20, 10.40, ('vid', VA, 15.20, 1.04, 1.10, 0.50, 0.40)),   # "abandona a atividade"
-    (10.40, 12.40, ('vid', VB, 14.00, 1.04, 1.00, 0.50, 0.45)),  # "volta pro celular" — se afasta
-    (12.40, 15.80, ('vid', VA, 17.60, 1.00, 1.05, 0.50, 0.55)),  # "E o pior?" — ponto de vista dos pais
-    (15.40, 17.30, ('img', 'Ft3', 1.00, 0.50, 0.48, 1.08, 0.50, 0.52)),   # virada: criança colorindo (dissolve)
-    (17.30, 19.10, ('img', 'L4', 1.05, 0.50, 0.45, 1.13, 0.48, 0.50)),
-    (19.10, 21.30, ('img', 'Ft1', 1.00, 0.50, 0.50, 1.10, 0.50, 0.47)),   # capa
-    (21.30, 25.05, ('img', 'Ft2', 1.12, 0.52, 0.42, 1.45, 0.62, 0.655)),  # páginas → 3 níveis
-    (25.05, 26.85, ('img', 'L3', 1.00, 0.50, 0.45, 1.08, 0.50, 0.50)),
-    (26.85, 28.62, ('img', 'L1', 1.04, 0.50, 0.42, 1.11, 0.50, 0.44)),
-    (28.62, 31.55, ('img', 'Ft4', 1.42, 0.50, 0.70, 1.28, 0.50, 0.665)),  # kit completo (capas dos bônus)
-    (31.55, 35.00, ('flip', FLIP, 23.55)),                                 # mockup do produto → capa
+SHOTS = [   # sem zoom artificial nos vídeos; fotos estáticas (exceto capa: 100→103% linear)
+    (0.00, 5.10, ('vid', VB, 6.28, 1.0, 1.0, 0.50, 0.46)),      # HOOK: tomada contínua até antes do corte interno do vídeo-fonte (11,4 s)
+    (5.10, 6.70, ('vid', VA, 9.20, 1.0, 1.0, 0.50, 0.50)),      # "separa tudo com carinho"
+    (6.70, 8.20, ('vid', VA, 5.60, 1.0, 1.0, 0.50, 0.50)),      # "começa animado"
+    (8.20, 10.40, ('vid', VA, 15.20, 1.0, 1.0, 0.50, 0.50)),    # "abandona a atividade"
+    (10.40, 12.40, ('vid', VB, 14.00, 1.0, 1.0, 0.50, 0.46)),   # "volta pro celular"
+    (12.40, 15.40, ('vid', VA, 17.60, 1.0, 1.0, 0.50, 0.50)),   # "E o pior?"
+    (15.40, 17.30, ('img', 'Ft3', 1.0, 0.50, 0.50, 1.0, 0.50, 0.50)),
+    (17.30, 19.10, ('img', 'L4', 1.0, 0.50, 0.50, 1.0, 0.50, 0.50)),
+    (19.10, 21.30, ('img', 'Ft1', 1.0, 0.50, 0.50, 1.03, 0.50, 0.50)),   # capa: única aproximação, 3 %
+    (21.30, 25.00, ('img', 'Ft2', 1.0, 0.50, 0.50, 1.0, 0.50, 0.50)),    # página inteira, 3 níveis visíveis
+    (25.00, 26.85, ('img', 'L3', 1.0, 0.50, 0.50, 1.0, 0.50, 0.50)),
+    (26.85, 28.62, ('img', 'L1', 1.0, 0.50, 0.50, 1.0, 0.50, 0.50)),
+    (28.62, 31.55, ('img', 'Ft4', 1.25, 0.50, 0.68, 1.25, 0.50, 0.68)),  # kit + capas dos bônus (sem rosto cortado)
+    (31.55, 35.00, ('flip', FLIP, 23.55)),
 ]
-DISSOLVE = {7: 0.40}   # cena 7 entra em dissolvência sobre a anterior (mudança de tom)
+# transição de entrada de cada cena (s): 0 = corte seco intencional (mesmo vídeo, sincronizado com a fala)
+XIN = {1: 0.20, 2: 0.0, 3: 0.0, 4: 0.20, 5: 0.20, 6: 0.30, 7: 0.25, 8: 0.25, 9: 0.25, 10: 0.25, 11: 0.25, 12: 0.25, 13: 0.30}
 
 # ---------------- legendas (texto exato da narração; tempos do alinhamento) ----------------
 KEY = {'insistir', 'mesmas', 'atividades', 'interesse.', 'carinho.', 'animado,', 'abandona', 'celular.', 'pior?', 'diferente.',
@@ -92,18 +92,41 @@ def photo(k):
     return _icache[k]
 
 def shot_frame(i, t):
-    t0, t1, src = SHOTS[i]; u = (t - t0) / (t1 - t0); e = ease(u)
+    t0, t1, src = SHOTS[i]; u = min(max((t - t0) / (t1 - t0), 0), 1); e = u   # velocidade constante
     if src[0] == 'vid':
         _, path, ts, z0, z1, cx, cy = src
-        n = int(round((t1 - t0) * FPS)) + 2
+        n = int(round((t1 - t0 + 0.4) * FPS)) + 2
         fr = vid_frames(path, ts, n)[min(int(round((t - t0) * FPS)), n - 1)]
-        return cover_crop(fr, z0 + (z1 - z0) * e, cx, cy)
+        return grade(cover_crop(fr, z0 + (z1 - z0) * e, cx, cy), i)
     if src[0] == 'img':
         _, k, z0, cx0, cy0, z1, cx1, cy1 = src
-        return cover_crop(photo(k), z0 + (z1 - z0) * e, cx0 + (cx1 - cx0) * e, cy0 + (cy1 - cy0) * e)
+        return grade(cover_crop(photo(k), z0 + (z1 - z0) * e, cx0 + (cx1 - cx0) * e, cy0 + (cy1 - cy0) * e), i)
     if src[0] == 'flip':
         n = int(round((t1 - t0) * FPS)) + 2
         return vid_frames(src[1], src[2], n)[min(int(round((t - t0) * FPS)), n - 1)].copy()
+
+_gcache = {}
+REF = np.array([0.0, 0.0, 0.0])
+def _shot_mean(i):
+    t0, t1, src = SHOTS[i]; tm = (t0 + t1) / 2
+    if src[0] == 'vid': im = cover_crop(vid_frames(src[1], src[2], int(round((t1 - t0 + 0.4) * FPS)) + 2)[int((tm - t0) * FPS)], 1.0, src[5], src[6])
+    elif src[0] == 'img': im = cover_crop(photo(src[1]), src[2], src[3], src[4])
+    else: return None
+    a = np.asarray(im.resize((108, 192)), np.float32) / 255; return a.reshape(-1, 3).mean(0)
+def grade(im, i):
+    if i not in _gcache:
+        means = [m for m in (_shot_mean(k) for k in range(len(SHOTS))) if m is not None]
+        target = np.mean(means, 0); m = _shot_mean(i)
+        if m is None: _gcache[i] = None
+        else:
+            lum_t, lum_m = target.mean(), m.mean()
+            g = np.clip((lum_t / lum_m) ** 0.35, 0.93, 1.07)                       # aproxima a exposição (35 %)
+            wb = np.clip((target / target.mean()) / (m / m.mean()), 0.94, 1.06) ** 0.4   # aproxima o balanço de branco (40 %)
+            _gcache[i] = (g * wb).astype(np.float32)
+    k = _gcache[i]
+    if k is None or np.allclose(k, 1, atol=0.004): return im
+    a = np.asarray(im, np.float32) * k
+    return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
 
 # ---------------- desenho de texto ----------------
 def wrap(text, fnt, maxw, draw):
@@ -189,8 +212,9 @@ def render(fi):
     cur = [i for i, (a, b, _) in enumerate(SHOTS) if a <= t < b]
     i = max(cur) if cur else len(SHOTS) - 1
     img = shot_frame(i, t)
-    if i in DISSOLVE and t < SHOTS[i][0] + DISSOLVE[i]:
-        prev = shot_frame(i - 1, t); img = Image.blend(prev, img, ease((t - SHOTS[i][0]) / DISSOLVE[i]))
+    x = XIN.get(i, 0)
+    if x and t < SHOTS[i][0] + x:
+        prev = shot_frame(i - 1, t); img = Image.blend(prev, img, ease((t - SHOTS[i][0]) / x))
     for a, b, txt, y in CAPS:
         if a <= t < b: draw_caption(img, txt, y if y != 'hook' else 900, hook=(y == 'hook'))
     for a, b, txt, y in CHIPS:
