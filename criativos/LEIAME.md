@@ -33,3 +33,9 @@ Mesma narração, legendas, oferta e CTA; 1080×1920, H.264 + AAC, 30 fps, 35,00
 - **Transições:** dissolvências curtas nas trocas de locação e de foto (0,20 s em 5,1/10,4; 0,30 s em 12,4→foto e 15,4; 0,25 s entre fotos; 0,30 s para o mockup). Cortes secos só dentro do mesmo vídeo (6,7 e 8,2 s), na troca de frase.
 - **Harmonização leve** de exposição e balanço de branco por cena (ganho ±7 %, 35–40 % em direção à média).
 - Áudio idêntico (md5) ao da versão anterior.
+
+---
+
+# P2_Transicoes_Corrigidas
+
+Base: `MPS_Criativo_01_UGC_Versao_Profissional.mp4`. Única mudança (`projeto_ugc/compose_p2.py`, linha `XIN`): as dissolvências de 10,4 s (menina→menino), 12,4 s (menino→menina) e 15,4 s (menina→foto da criança colorindo) viraram cortes limpos no mesmo ponto. Áudio idêntico (md5); fora desses 20 quadros, PSNR ≥ 43 dB em relação à versão anterior.
